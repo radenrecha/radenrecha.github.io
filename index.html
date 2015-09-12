@@ -1,76 +1,109 @@
 ---
-layout: post-index
-title: 含德之厚，比于赤子 
-description: "柔弱、无欲，顺乎自然，但却具有强大的生命力"
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-comments: false
-image:
-  feature: dao_1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+layout: default 
 ---
 
-{% for post in paginator.posts %}
-<article class="hentry">
-  <header>
-    {% if post.image.feature %}
-      <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-      </div><!-- /.entry-image -->
-    {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
-        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
-    {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
-    {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-    {% endif %}
-  </header>
-  <div class="entry-content">
-    {{ post.content }}
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-{% endfor %}
+<header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
+    <a class="list_button" id="info_buttom"><i class="fa fa-puzzle-piece"></i></a>
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <ul class="meta">
+            <li>
+                <span>
+                {{ site.tagline }}
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="info" id="myinfo">
+        <span>A sky full of stars<!-- <i class="fa fa-music"></i> -->&copy; 2015 &nbsp;&nbsp;limingyang2012</span>
+        <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=77101150&auto=0&height=90" id="audioplay"></iframe> -->
+    </div>
+</header>
+<article>
+    <section class="cate-menu">
+        <div class="cate-content">
+            <h3>[ CATEGORY ]</h3>
+            <ul class="cate-list">
+                <li data-cate="all">[ all ]<span>{{site.categories | size}}</span></li>
+                {% for category in site.categories %}
+                <li data-cate="{{ category | first }}">
+                    [ {{ category | first }} ]<span>{{ category | last | size }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a id="cateShow"></a>
+    </section>
+    <div class="container cate-posts">
+        <ul class="posts" data-cate="all">
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  <h2>{{ post.title }}</h2>
+                  <span class="date">{{ post.date | date_to_string }}</span>
+                  {{ post.excerpt }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- 分类菜单内容 -->
+        {% for category in site.categories %}
+        <ul class="posts cates" data-cate="{{category | first}}">
+            {% for posts in category  %}
+            {% for post in posts %}
+            {% if post.url %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date_to_string }}</span>
+                    {{ post.excerpt }}
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    <a id="returnTop"></a> 
+</article>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <a href="{{ site.url }}" class="btn">Previous</a>
-    {% else %}
-      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
-    {% endif %}
-  {% else %}
-    Previous
-  {% endif %}
-  <ul class="inline-list">
-    <li>
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
-        <a href="{{ site.url }}">1</a>
-      {% endif %}
-    </li>
-    {% for count in (2..paginator.total_pages) %}
-      <li>
-        {% if count == paginator.page %}
-          <span class="current-page">{{ count }}</span>
-        {% else %}
-          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.next_page %}
-    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
-  {% else %}
-    Next
-  {% endif %}
-</div><!-- /.pagination -->
+<div class="info_page" id="info-warp">
+    <a class="home_button" id="home_btn"></a>
+    <div class="info_menu">
+        <ul id="list_menu">
+            <li id="list_info" class="active"><i class="fa fa-user"></i>Info</li>
+            <li id="list_contact"><i class="fa fa-tty"></i>Contact</li>
+            <li id="list_about"><i class="fa fa-cube"></i>About</li>
+        </ul>
+    </div>
+    <div class="info_content">
+        <article>
+            <div class="icon_chen"></div>
+            <div class="info_me">
+                <h1>大家好！我是李明洋</h1>
+                <p>在校硕士研究生，电子科学与技术专业，2017年毕业，研究方向为光网络与光通信、微波光子学。但个人更喜欢前端开发，目前在自学前端开发</p>
+                <p>平时喜欢跑步、骑车，闲时也喜欢看看电影</p>
+                <p>目前希望可以找到一个前端工作实习</p>
+            </div>
+            <div class="contact_me">
+                <p>CALL ME：18767100969</p>
+                <p>or Click them ☟</p>
+                <div class="list_icon">
+                    <a href="https://github.com/limingyang2012" target="_blank" class="github_button"></a>
+                    <a href="mailto:limingyang2012@zju.edu.cn" class="mail_button"></a>
+                    <a href="http://sighttp.qq.com/authd?IDKEY=8f39c13b0671e15dfe1f72159ee60e8ac64840a0f3fb2884"  target="_blank" class="qq_button"></a>
+                    <a href="http://weibo.com/5202127908" target="_blank" class="weibo_button"></a>
+                </div>
+            </div>
+            <div class="about_here">
+                <b>[ 友情链接 ]</b>
+                <p>
+                    <a href="http://www.chen9.info/" target="_blank">[ zchen9 ]</a>
+                </p>
+                <p>Powered By Github &amp; jekyll</p>
+                <p>&copy;2015  limingyang2012</p>
+            </div>
+        </article>
+    </div>
+</div>
