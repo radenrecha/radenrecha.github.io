@@ -1,22 +1,22 @@
-title:            Site Title
-description:      Describe your website here.
+title:            德赤
+description:      柔弱、无欲，顺乎自然，但却具有强大的生命力.
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: limingyang2012.github.io
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           limingyang2012
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  bio:            "勿忘初心"
+  email:          limingyang2012@zju.edu.cn
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       
-  github:         
+  facebook:       https://www.facebook.com/profile.php?id=100008706543243
+  github:         limingyang2012
   stackexchange:  
   linkedin:       
   instagram:      
@@ -32,7 +32,7 @@ background:
 google_analytics:   
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify: 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
