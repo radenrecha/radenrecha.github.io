@@ -1,5 +1,5 @@
 ###本博客是基于[Strange Case](http://thephuse.github.io/strange_case/)
-
+###本博客是引用自[chen9](http://www.chen9.info/)
 Strange Case
 ============
 
