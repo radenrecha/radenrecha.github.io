@@ -12,24 +12,34 @@ featured_image: /images/cover.jpg
 
 ####注
 
-1.以下内容并非原创，摘抄自网上别人的博客。
+1.以下内容并非原创，总结摘抄自网上别人的博客，供自己学习使用，侵删。
 
 ####Javascript数据结构
+
 ##动态类型
+
 >JavaScript 是一种弱类型或者说动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：
+
 ##数据类型
+
 最新的ECMAScript定义了7种数据类型
 
 6种原始类型: 
 
 >Boolean
+
 >Null
+
 >Undefined
+
 >Number
+
 >String
+
 >Symbol (new in ECMAScript 6)
 
 以及：
+
 > Object
 
 ####js判断数组类型的方法
@@ -68,8 +78,10 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
 在W3C定义中的定义：constructor属性返回对创建此对象的数组函数的引用,就是返回对象相对应的构造函数。从定义上来说跟instanceof不太一致，但效果都是一样的。
 
 如: 
+
 >(a instanceof Array)   //a是否Array的实例？true or false
-> (a.constructor == Array)  // a实例所对应的构造函数是否为Array? true or false
+
+>(a.constructor == Array)  // a实例所对应的构造函数是否为Array? true or false
 
         var c1 = [1,2,3];
         console.log(c1.constructor == Array);//true
@@ -101,6 +113,7 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
 >使用instaceof和construcor,被判断的array必须是在当前页面声明的！比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个array，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；
 
 原因
+
 >a、array属于引用型数据，在传递过程中，仅仅是引用地址的传递。
 
 >b、每个页面的Array原生对象所引用的地址是不一样的，在子页面声明的array，所对应的构造函数，是子页面的Array对象；父页面来进行判断，使用的Array并不等于子页面的Array；切记，不然很难跟踪问题！
