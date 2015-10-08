@@ -772,7 +772,7 @@ article .post-comment{
 }
 
 .list_icon {
-    width: 320px;
+    width: 240px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -807,9 +807,6 @@ article .post-comment{
 }
 .mail_button{
     background-image: url(../../images/icon_mail.png);
-}
-.qq_button{
-    background-image: url(../../images/icon_qq.png);
 }
 .weibo_button{
     background-image: url(../../images/icon_weibo.png);
@@ -1071,7 +1068,7 @@ ul.posts p {
 .ds-replybox .ds-textarea-wrapper,.ds-post-options{
     border: none !important;
     background: none !important;
-}
+} 
 
 /* 回到顶部 */
  #returnTop {
