@@ -995,7 +995,8 @@ ul.posts p {
 /*comment*/
 
 .ds-thread{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    border-radius: 5px;
 }
 
 .ds-thread .ds-sync,.ds-meta{
@@ -1073,10 +1074,10 @@ ul.posts p {
 /* 回到顶部 */
  #returnTop {
     position: fixed;
-    right: 25px;
+    right: 40px;
     bottom: -200px;
-    width:36px;
-    height:65px;
+    width:28px;
+    height:64px;
     color: #FFF;
 
     background-image: url(../../images/top.png);
@@ -1094,7 +1095,7 @@ ul.posts p {
 }
 
 #returnTop:hover {
-    background-position:0 -65px;
+    background-position:-28px 0px;
 }
 
 @media (max-width: 960px){
