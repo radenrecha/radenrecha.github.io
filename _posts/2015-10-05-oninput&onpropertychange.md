@@ -10,7 +10,7 @@ featured_image: /images/cover.jpg
 
 ---
 
-##1、onchange事件
+#####1、onchange事件
 对于text文本框来说，当光标离开元素的时候再去判断值是否发生了变化，如果发生了变化则触发onchange事件。
 
         HTML
@@ -33,7 +33,7 @@ featured_image: /images/cover.jpg
 			}	
 		}
 
-##2、onpropertychange事件
+#####2、onpropertychange事件
 onpropertychange属性可在某些情况下解决上面存在的问题，不用考虑是否失去焦点，不管js操作还是键盘鼠标手动操作，只要HTML元素属性发生改变即可立即捕获到。遗憾的是，onpropertychange为IE专属的。
 
         HTML
@@ -48,7 +48,7 @@ onpropertychange属性可在某些情况下解决上面存在的问题，不用�
         } 
         $('input').attachEvent("onpropertychange", OnPropChanged);
 
-##3、oninput事件
+#####3、oninput事件
 oninput 是onpropertychange的非IE浏览器版本，支持firefox和opera等浏览器，但有一点不同，它绑定于对象时，并非该对象所有属性改变都能触发事件，它 只在对象value值发生改变时奏效 。JS改变value时不能触发。
 
         HTML
@@ -61,7 +61,7 @@ oninput 是onpropertychange的非IE浏览器版本，支持firefox和opera等浏
         }
         $('input').addEventListener("input", OnInput);
 
-##4、综合
+#####4、综合
 兼容的写法就是需要onpropertychange（用在IE浏览器）和oninput（非IE浏览器）结合在一起同时使用。 
 
         HTML
@@ -91,7 +91,7 @@ oninput 是onpropertychange的非IE浏览器版本，支持firefox和opera等浏
             }
         }
 
-##5、汇总onchange onpropertychange 和oninput事件的区别：
+#####5、汇总onchange onpropertychange 和oninput事件的区别：
 a、onchange事件与onpropertychange事件的区别：
 
 >onchange事件在内容改变（两次内容有可能还是相等的）且失去焦点时触发；onpropertychange事件却是实时触发，即每增加或删除一个字符就会触发，通过js改变也会触发该事件，但是该事件IE专有。
@@ -105,7 +105,7 @@ c、oninput与onpropertychange失效的情况：
 >（1）oninput事件：a). 当脚本中改变value时，不会触发；b).从浏览器的自动下拉提示中选取时，不会触发。 
 （2）onpropertychange事件：当input设置为disable=true后，onpropertychange不会触发。 
 
-##参考链接：
+#####参考链接：
 [1、总结oninput、onchange与onpropertychange事件的用法和区别 ](http://blog.csdn.net/freshlover/article/details/39050609);
 
 [2、onpropertychange事件没有触发的处理方法](http://www.tuicool.com/articles/iIFfymZ)
