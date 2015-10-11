@@ -239,9 +239,9 @@ name是"小李洋"。
 
 #####参考资料：
 
-[鸟哥：Javascript作用域原理](http://www.laruence.com/2009/05/28/863.html)
+[1、鸟哥：Javascript作用域原理](http://www.laruence.com/2009/05/28/863.html)
 
-[理解 JavaScript 作用域和作用域链](http://www.cnblogs.com/lhb25/archive/2011/09/06/javascript-scope-chain.html)
+[2、理解 JavaScript 作用域和作用域链](http://www.cnblogs.com/lhb25/archive/2011/09/06/javascript-scope-chain.html)
 
-[Js作用域与作用域链详解 ](http://blog.csdn.net/yueguanghaidao/article/details/9568071)
+[3、Js作用域与作用域链详解 ](http://blog.csdn.net/yueguanghaidao/article/details/9568071)
 
