@@ -1,5 +1,5 @@
 # Site settings
-title: '含德之厚,比于赤子'  # Your Title
+title: 'LMY-HOME'  # Your Title
 tagline: '柔弱、无欲，顺乎自然，但却具有强大的生命力'  # A brief tagline for your site
 sidebar_image: /images/cover.jpg
 
@@ -8,6 +8,6 @@ sidebar_image: /images/cover.jpg
 encoding: UTF-8
 markdown: kramdown
 #markdown: redcarpet
-#highlighter: pygments
+pygments: true
 highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
