@@ -4,13 +4,12 @@ $(document).ready(function(){
     $("#info_buttom").bind("click",scrollDown);
     $("#home_btn").bind("click",scrollUp);
 
-
     // 回到顶部
-    $("article").scroll(function(){     
-        $("article").scrollTop()>$("header").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
-    });
+   /* $("#main-contain").scroll(function(){     
+        $("#main-contain").scrollTop()>$("header").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
+    });*/
     $(window).scroll(function(){
-        $(window).scrollTop()>$("article").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
+        $(window).scrollTop()>100? $("#returnTop").css("bottom","60px"):$("#returnTop").css("bottom","-200px");
     });
     $("#returnTop").bind("click",function(){
         $("article").animate({scrollTop: 0},500),
@@ -18,20 +17,20 @@ $(document).ready(function(){
     });
 
     //分类菜单显示
-    $("#cateShow").bind("click",function(){
+    /*$("#cateShow").bind("click",function(){
         if($(".cate-content").css("display") == "none"){
             $(".cate-content").show(400);
         }else{
             $(".cate-content").hide(400);
         }
         
-    });
+    });*/
 
     //菜单点击
-    $(".cates").hide();
+    //$(".cates").hide();
     $(".cate-list li").bind("click",function(){
         var cateName = $(this).attr("data-cate");
-        $(".cate-content").hide(400);
+        //$(".cate-content").hide(400);
         $(".cate-posts > ul[data-cate != "+cateName+"]").slideUp(280);
         $(".cate-posts > ul[data-cate = "+cateName+"]").slideDown(400);
     });
@@ -42,16 +41,6 @@ $(document).ready(function(){
         $(".fa-music").toggleClass("fa-spin");
         $("#audioplay").fadeToggle(400,"linear");
     });
-
-
-    $("header,.container").bind("click",function(){
-        //菜单隐藏
-        $(".cate-content").hide(400);
-        //音乐播放器隐藏
-        $(".fa-music").removeClass("fa-spin");
-        $("#audioplay").fadeOut(400);
-    })
-
 
     // 信息切换
     $("#list_info").bind("click",function(){
