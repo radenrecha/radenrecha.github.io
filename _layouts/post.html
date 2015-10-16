@@ -1,51 +1,29 @@
 ---
 layout: default
 ---
-<header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
-    <div class="container post-container">
-        <a href="{{ site.baseurl }}/" class="home_button"></a>
-        <div class="inner-container">
+<div id="main-contain">
+    <!--post正文-->
+    <article>
+        <div class="container">
             <h1>{{ page.title }}</h1>
-            <ul class="meta">
-                <li>
-                    <span>Published</span>
-                  {{ page.date | date_to_string }}
-                </li>
-                <li>
-                    <span>Category</span>
-                    {{ page.categories }}
-                </li>
-            </ul>      
+            <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
+            
+            {{ content }}
+
+            <div class="post-comment">
+                <span>Comments</span>
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="limingyang2012.github.io{{ page.url }}"></div>
+                <!-- 多说评论框 end -->
+            </div>
         </div>
-        <ul class="pagination">
-            {% if page.previous.url %}
-            <li class="previous">
-                <a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
-            </li>
-            {% endif %}
-            {% if page.next.url %}
-            <li class="next">
-                <a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
-            </li>
-            {% endif %}
-        </ul>
+    </article>
+
+    <!--右边目录-->
+    <div class="catalog-menu">
+        
     </div>
-</header>
-
-<article>
-    <div class="container">
-
-        {{ content }}
-
-        <div class="post-comment">
-            <span>Comments</span>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="limingyang2012.github.io{{ page.url }}"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <a id="returnTop"></a> 
-</article>
+</div>
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -56,7 +34,7 @@ layout: default
             ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
             ds.charset = 'UTF-8';
             (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
         })();
 </script>
 <!-- 多说公共JS代码 end -->

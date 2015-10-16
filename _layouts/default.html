@@ -12,8 +12,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/reset.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/statics/css/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/statics/css/main.css">
     <link rel="stylesheet" href="//libs.cncdn.cn/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Fonts -->
@@ -38,9 +38,18 @@
 
 </head>
 <body>
-    {{ content }}
+    <div id="blog-contain">
+           
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+
+        <!--回到顶部-->
+        <a id="returnTop"></a> 
+         
+    </div>
 
     <script src="//libs.cncdn.cn/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{ site.url }}/assets/js/index.js"></script>
+    <script src="{{ site.url }}/statics/js/index.js"></script>
 </body>
 </html>
