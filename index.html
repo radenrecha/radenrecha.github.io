@@ -1,110 +1,41 @@
 ---
 layout: default 
----
-
-<header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
-    <a class="list_button" id="info_buttom"><i class="fa fa-puzzle-piece"></i></a>
-    <div class="container">
-        <h1>{{ site.title }}</h1>
-        <ul class="meta">
-            <li>
-                <span>
-                {{ site.tagline }}
-                </span>
-            </li>
-        </ul>
-    </div>
-    <div class="info" id="myinfo">
-        <span>A sky full of stars<!-- <i class="fa fa-music"></i> -->&copy; 2015 &nbsp;&nbsp;limingyang2012</span>
-        <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=77101150&auto=0&height=90" id="audioplay"></iframe> -->
-    </div>
-</header>
-<article>
-    <section class="cate-menu">
-        <div class="cate-content">
-            <h3>[ CATEGORY ]</h3>
-            <ul class="cate-list">
-                <li data-cate="all">[ all ]<span>{{site.categories | size}}</span></li>
-                {% for category in site.categories %}
-                <li data-cate="{{ category | first }}">
-                    [ {{ category | first }} ]<span>{{ category | last | size }}</span>
+---      
+<div id="main-contain">
+    <!--menu-->
+    <article>
+        <div class="container">
+            <h1>[ POSTS ]</h1>
+            <ul class="posts" data-cate="all" >
+                {% for post in site.posts %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}" target='_blank'>
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date_to_string }}</span>
+                          {{ post.excerpt }}
+                    </a>
                 </li>
                 {% endfor %}
             </ul>
         </div>
-        <a id="cateShow"></a>
-    </section>
-    <div class="container cate-posts">
-        <ul class="posts" data-cate="all">
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                  <h2>{{ post.title }}</h2>
-                  <span class="date">{{ post.date | date_to_string }}</span>
-                  {{ post.excerpt }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        <!-- 分类菜单内容 -->
-        {% for category in site.categories %}
-        <ul class="posts cates" data-cate="{{category | first}}">
-            {% for posts in category  %}
-            {% for post in posts %}
-            {% if post.url %}
-            <li>
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                    <h2>{{ post.title }}</h2>
-                    <span class="date">{{ post.date | date_to_string }}</span>
-                    {{ post.excerpt }}
-                </a>
-            </li>
-            {% endif %}
-            {% endfor %}
-            {% endfor %}
-        </ul>
-        {% endfor %}
+    </article>
+        
+    <!--gategory-->
+    <div class="gategory-menu">
+        <div class="gategory-content">
+            <h3>[ CATEGORY ]</h3>
+            <ul class="gategory-list">
+                <li data-cate="all">[ all ]<span>{{site.posts | size}}</span></li>
+                {% for category in site.categories %}
+                <li data-cate="{{ category | first }}">
+                    [ {{ category | first }} ]<span>{{ category | last | size }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a id="gategoryShow"></a>
     </div>
-    <a id="returnTop"></a> 
-</article>
 
-<div class="info_page" id="info-warp">
-    <a class="home_button" id="home_btn"></a>
-    <div class="info_menu">
-        <ul id="list_menu">
-            <li id="list_info" class="active"><i class="fa fa-user"></i>Info</li>
-            <li id="list_contact"><i class="fa fa-tty"></i>Contact</li>
-            <li id="list_about"><i class="fa fa-cube"></i>About</li>
-        </ul>
-    </div>
-    <div class="info_content">
-        <article>
-            <div class="icon_chen"></div>
-            <div class="info_me">
-                <h1>大家好！我是李明洋</h1>
-                <p>本科  杭州电子科技大学  电子信息工程</p>
-                <p>硕士  浙江大学  电子科学与技术</p>
-                <p>硕士在读，2017年毕业，研究方向为光网络与光通信、微波光子学。但个人更喜欢前端开发，目前在自学前端开发</p>
-                <p>平时喜欢跑步、骑车，闲时也喜欢看看电影</p>
-                <p>目前希望可以找到一个前端工作实习</p>
-            </div>
-            <div class="contact_me">
-                <p>CALL ME：18767100969</p>
-                <p>or Click them ☟</p>
-                <div class="list_icon">
-                    <a href="https://github.com/limingyang2012" target="_blank" class="github_button"></a>
-                    <a href="mailto:limingyang2012@zju.edu.cn" class="mail_button"></a>
-                    <a href="http://weibo.com/5202127908" target="_blank" class="weibo_button"></a>
-                </div>
-            </div>
-            <div class="about_here">
-                <b>[ 友情链接 ]</b>
-                <p>
-                    <a href="http://www.chen9.info/" target="_blank">[ zchen9 ]</a>
-                </p>
-                <p>Powered By Github &amp; jekyll</p>
-                <p>&copy;2015  limingyang2012</p>
-            </div>
-        </article>
-    </div>
 </div>
+
+    
