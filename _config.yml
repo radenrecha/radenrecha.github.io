@@ -8,6 +8,10 @@ sidebar_image: /images/cover.jpg
 encoding: UTF-8
 markdown: kramdown
 #markdown: redcarpet
-pygments: true
+
+paginate: 5
+paginate_path: "page:num"
+
+#pygments: true
 highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/

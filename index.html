@@ -7,9 +7,9 @@ layout: default
         <div class="container">
             <h1>[ POSTS ]</h1>
             <ul class="posts" data-cate="all" >
-                {% for post in site.posts %}
+                {% for post in  paginator.posts %}
                 <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}" target='_blank'>
+                    <a href="{{ site.baseurl }}{{ post.url }}" >
                     <h2>{{ post.title }}</h2>
                     <span class="date">{{ post.date | date_to_string }}</span>
                           {{ post.excerpt }}
@@ -17,6 +17,32 @@ layout: default
                 </li>
                 {% endfor %}
             </ul>
+        </div>
+
+
+        <!-- 分页代码 http://www.tuicool.com/articles/mIVJ7j-->
+        <div class="paginator">
+            {% if paginator.total_pages > 1 %}
+            <!-- 分页代码 -->
+            {% endif %}
+
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                  <span class="active">{{ page }}</span>
+                {% elsif page == 1 %}
+                  <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                {% else %}
+                  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+            {% endif %} 
         </div>
     </article>
         
@@ -37,5 +63,7 @@ layout: default
     </div>
 
 </div>
+
+
 
     

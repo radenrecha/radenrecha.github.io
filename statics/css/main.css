@@ -25,9 +25,9 @@ body {
 */
 #blog-contain{
     width:100%;
+    min-height: 960px;
     position: relative;
 }
-
 
 /*
     index&post
@@ -37,6 +37,12 @@ body {
     width:60%;
     margin: 10px auto;
 }
+@media (max-width: 960px) {
+    #main-contain {
+        width: 100%;
+        overflow: visible;
+    }
+}
 /*
     index&post
     article
@@ -45,9 +51,15 @@ article{
     vertical-align: top;
     height: 100%;
     white-space: normal;
+    width: 75%;
+    display: inline-block;
+    position: relative;
+    background: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #666;
 }
 article .container {
-    padding:40px 20px;
+    padding:20px 20px 10px;
     width: 100%;
 }
 @media (max-width: 960px) {
@@ -57,14 +69,6 @@ article .container {
     article .container {
         padding: 25px;
     }
-}
-article {
-    width: 75%;
-    display: inline-block;
-    position: relative;
-    background: #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px #666;
 }
 @media (max-width: 960px) {
     article {
@@ -157,6 +161,22 @@ article .post-comment{
     border-bottom: 5px solid #CE2323;
 }
 
+/* paginator */
+.paginator{
+    text-align: center;
+    padding:20px 0;
+    border-top: 1px solid #fff;
+}
+.paginator a{
+    margin: 0 15px;
+    font-weight: 600;
+    color:#9F79EE!important;
+}
+.paginator a:hover{
+    color:#9400D3!important;
+}
+
+
 /* 
     index&post
     post
@@ -212,7 +232,7 @@ ul.posts p {
 
 /* header */
 header{
-    padding: 10px 0;
+    padding: 4px 0;
     background:#fbfbfb;
     font-size: 1.4em;
     box-shadow: 0 2px 5px #ccc;
@@ -286,6 +306,8 @@ header ul.meta li span {
 /*footer */
 footer{
   width:100%;
+  height: 100%;
+  display: block;
   padding: 2px 0;
   background:#fbfbfb;
   box-shadow: 0 -2px 5px #ccc;
@@ -382,7 +404,16 @@ footer{
 
 /*catalog*/
 
-
+/* weixin */
+.weixin{
+    position: fixed;
+    right:0;
+    top:0;
+}
+.weixin img{
+    height:100px;
+    width:100px;
+}
 
 /*highlight*/
 .hljs {
