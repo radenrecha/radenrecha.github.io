@@ -2,11 +2,10 @@
 layout: post
 title:  "清浮动的八种方法"
 date:  2015-09-15
-categories: HTML+CSS
-featured_image: /images/cover.jpg
+categories: HTM
 ---
 
-###清浮动的八种方法学习笔记
+#####清浮动的八种方法学习笔记
 
 ---
 
@@ -43,7 +42,7 @@ featured_image: /images/cover.jpg
 
 ####清浮动(撑开父级元素)
 
-#####方法1:
+####方法1:
 给父级元素加高，如下代码2所示，给box加上了height:400px；确实可以清除浮动，但是此方法扩展性很差。
 
 代码2：
@@ -62,7 +61,7 @@ featured_image: /images/cover.jpg
         </div>
 
 
-#####方法2:
+####方法2:
 给父级也加浮动，如下代码3所示，给box加上了 float:left;；确实可以清除浮动，但是此方法使margin左右失效了，不提倡此方法。
 
 代码3：
@@ -80,7 +79,7 @@ featured_image: /images/cover.jpg
             </div>
         </div>
 
-#####方法3:
+####方法3:
 父级添加display: inline-block来清除浮动，如下代码4所示，给box加上了 display:inline-block;确实可以清除浮动，但是此方法使margin左右失效了，不提倡此方法。
 
 代码4：
@@ -98,7 +97,7 @@ featured_image: /images/cover.jpg
             </div>
         </div>
 
-#####方法4:
+####方法4:
 在浮动元素下边加上<div class=”clear”></div>空标签清浮动，如下代码5所示,确实可以清除浮动，但是IE6最小高度19px；解决后IE6下还有2px偏差。
 
 代码5：
@@ -115,7 +114,7 @@ featured_image: /images/cover.jpg
         </div>
 
 
-#####方法5:
+####方法5:
 在浮动元素下加<br clear="all"/>，如下代码6所示。确实可以清浮动，但是不符合W3C标准，样式混入了html
 
 代码6：
@@ -130,7 +129,7 @@ featured_image: /images/cover.jpg
             <br clear="all"/>
         </div>
 
-#####方法6:
+####方法6:
 给浮动元素的父级元素加上clear类，然后给该元素的after伪类设置如下样式，如下代码7所示。IE6、7不支持after伪类，为了兼容IE6、7，还要给父级元素加上样式zoom:1，但是推荐此种方法
 
 代码7：
@@ -148,12 +147,12 @@ featured_image: /images/cover.jpg
         </div>
 
 
-#####注意：在IE6、7下，浮动元素的父级有宽度的话，就不需要清浮动，本身就可以清浮动了。
+####注意：在IE6、7下，浮动元素的父级有宽度的话，就不需要清浮动，本身就可以清浮动了。
 >在IE中，子元素的宽高要么是跟着父级走的，要么是跟着内容走的。这个可以用haslayout来调节。但是haslayout不会自动控制。haslayout的默认值为false。但是用了特定样式的时候，haslayout会变成true。具体可以看这里百度百科的词条。
 >当haslayout触发的时候，会根据元素内容大小或者父级的大小来重新计算元素的宽高。所以在IE6、7下，如果给浮动元素的父级加了宽高的话，那么触发了haslayout。该父级元素就根据其内容，及子元素来重新计算宽高，也就清除了浮动。如果父级元素没有加宽高的话，通过加zoom: 1;来触发haslayout，就可以解决问题了。也就是说，为了兼容IE6、7，除了给父级元素加上clear类，然后该给父级元素的after伪类添加上述样式之外，还要给该父级元素加上zoom: 1;的样式。
 
 
-#####方法7:
+####方法7:
 给浮动元素父级加overflow: hidden;或overflow: auto;来清除浮动，并且一定要配合zoom: 1使用。如下代码8所示。IE6下，overflow没有包住浮动子元素的功能，为了兼容，还是要加zoom: 1来解决一下
 
 代码8：
@@ -167,7 +166,7 @@ featured_image: /images/cover.jpg
             <div class="div1"></div>
         </div>
 
-#####方法8、
+####方法8、
 给浮动元素的父级元素添加position:absolute或者position:fixed，都可以清除浮动。如下代码9所示。
 
 代码9：

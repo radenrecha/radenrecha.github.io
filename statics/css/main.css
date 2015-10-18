@@ -210,12 +210,16 @@ ul.posts li:hover {
     transition: all .3s linear;
 }
 ul.posts li a{
+    font-weight: normal!important;
     outline: none;
 }
 ul.posts .date {
-    display: block;
-    margin: 2px 0;
     color: #8d8d8d;
+}
+.posts .description{
+    font-size: 1.2em;
+    font-weight: normal!important;
+    color: #000;
 }
 ul.posts h2{
     margin-top: 10px;
