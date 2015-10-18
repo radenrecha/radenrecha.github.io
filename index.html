@@ -4,9 +4,9 @@ layout: default
 <div id="main-contain">
     <!--menu-->
     <article>
-        <div class="container">
+        <div class="container cate-posts">
             <h1>[ POSTS ]</h1>
-            <ul class="posts" data-cate="all" >
+            <ul class="posts" data-cate="all" >    
                 {% for post in  paginator.posts %}
                 <li>
                     <a href="{{ site.baseurl }}{{ post.url }}" >
@@ -17,6 +17,24 @@ layout: default
                 </li>
                 {% endfor %}
             </ul>
+            <!-- 分类菜单内容 -->
+            {% for category in site.categories %}
+            <ul class="posts cates" data-cate="{{category | first}}">
+                {% for posts in category  %}
+                {% for post in posts %}
+                {% if post.url %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}" >
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date_to_string }}</span>
+                          {{ post.excerpt }}
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
         </div>
 
 
@@ -44,24 +62,21 @@ layout: default
                 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
             {% endif %} 
         </div>
-    </article>
-        
-    <!--gategory-->
-    <div class="gategory-menu">
-        <div class="gategory-content">
+    </article>       
+    <!--category-->
+    <div class="category-menu">
+        <div class="category-content">
             <h3>[ CATEGORY ]</h3>
-            <ul class="gategory-list">
+            <ul class="category-list">
                 <li data-cate="all">[ all ]<span>{{site.posts | size}}</span></li>
-                {% for category in site.categories %}
+                    {% for category in site.categories %}
                 <li data-cate="{{ category | first }}">
-                    [ {{ category | first }} ]<span>{{ category | last | size }}</span>
-                    </li>
-                {% endfor %}
+                        [ {{ category | first }} ]<span>{{ category | last | size }}</span>
+                </li>
+                    {% endfor %}
             </ul>
         </div>
-        <a id="gategoryShow"></a>
     </div>
-
 </div>
 
 

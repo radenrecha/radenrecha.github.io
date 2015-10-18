@@ -1,13 +1,6 @@
 $(document).ready(function(){
 
-    //个人信息模块按钮
-    $("#info_buttom").bind("click",scrollDown);
-    $("#home_btn").bind("click",scrollUp);
-
     // 回到顶部
-   /* $("#main-contain").scroll(function(){     
-        $("#main-contain").scrollTop()>$("header").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
-    });*/
     $(window).scroll(function(){
         $(window).scrollTop()>100? $("#returnTop").css("bottom","60px"):$("#returnTop").css("bottom","-200px");
     });
@@ -16,30 +9,12 @@ $(document).ready(function(){
         $("html,body").animate({scrollTop: 0},500)
     });
 
-    //分类菜单显示
-    /*$("#cateShow").bind("click",function(){
-        if($(".cate-content").css("display") == "none"){
-            $(".cate-content").show(400);
-        }else{
-            $(".cate-content").hide(400);
-        }
-        
-    });*/
-
     //菜单点击
-    //$(".cates").hide();
-    $(".cate-list li").bind("click",function(){
+    $(".cates").hide();
+    $(".category-list li").bind("click",function(){
         var cateName = $(this).attr("data-cate");
-        //$(".cate-content").hide(400);
-        $(".cate-posts > ul[data-cate != "+cateName+"]").slideUp(280);
-        $(".cate-posts > ul[data-cate = "+cateName+"]").slideDown(400);
-    });
-
-    //音乐播放
-    $(".fa-music").bind("click",function(){
-        event.stopPropagation(); 
-        $(".fa-music").toggleClass("fa-spin");
-        $("#audioplay").fadeToggle(400,"linear");
+        $(".cate-posts > ul[data-cate != "+cateName+"]").hide(280);
+        $(".cate-posts > ul[data-cate = "+cateName+"]").show(400);
     });
 
     // 信息切换
