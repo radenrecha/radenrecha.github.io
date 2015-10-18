@@ -3,12 +3,10 @@ layout: post
 title:  "JavaScript闭包"
 date:  2015-10-09
 categories: JavaScript
-featured_image: /images/cover.jpg
 ---
 
-###JavaScript闭包学习笔记
+#####JavaScript闭包学习笔记
 
----
 ---
 
 ####什么是闭包？

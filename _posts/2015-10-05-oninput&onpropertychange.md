@@ -3,10 +3,9 @@ layout: post
 title:  "onchange、oninput与onpropertychange对于文本框的作用"
 date:  2015-10-05
 categories: JavaScript
-featured_image: /images/cover.jpg
 ---
 
-###onchange、oninput与onpropertychange对于文本框的作用学习笔记
+#####onchange、oninput与onpropertychange对于文本框的作用学习笔记
 
 ---
 

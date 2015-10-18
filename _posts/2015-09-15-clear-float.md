@@ -2,10 +2,11 @@
 layout: post
 title:  "清浮动的八种方法"
 date:  2015-09-15
-categories: HTML&CSS
+categories: HTML+CSS
+featured_image: /images/cover.jpg
 ---
 
-#####清浮动的八种方法学习笔记
+###清浮动的八种方法学习笔记
 
 ---
 

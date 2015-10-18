@@ -3,12 +3,10 @@ layout: post
 title:  "JavaScript作用域和作用域链"
 date:  2015-10-08
 categories: JavaScript
-featured_image: /images/cover.jpg
 ---
 
-###JavaScript作用域和作用域链学习笔记
+#####JavaScript作用域和作用域链学习笔记
 
----
 ---
 
 ####JavaScript作用域：全局作用域(Global Scope)&局部作用域(Local Scope)

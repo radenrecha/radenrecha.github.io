@@ -3,10 +3,9 @@ layout: post
 title:  "js判断是否为数组的函数isArray()"
 date:  2015-09-19
 categories: JavaScript
-featured_image: /images/cover.jpg
 ---
 
-###js判断是否为数组的函数isArray()学习笔记
+#####js判断是否为数组的函数isArray()学习笔记
 
 ---
 
