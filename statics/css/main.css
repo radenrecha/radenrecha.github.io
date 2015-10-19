@@ -18,7 +18,10 @@ body {
     overflow-x: hidden;
     white-space: nowrap;
 }
-
+h1,h2,h3,h4,h5,h6{
+    padding:0px;
+    margin: 0px;
+}
 /*
     default
     blog-contain
@@ -128,6 +131,12 @@ article .posts h4{
     font-weight: 600;
     color: #CE2323;
 }
+article .posts h5{
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    color:#333;
+}
 article b{
     display: block;
     font-size: 1em;
@@ -215,11 +224,6 @@ ul.posts li a{
 }
 ul.posts .date {
     color: #8d8d8d;
-}
-.posts .description{
-    font-size: 1.2em;
-    font-weight: normal!important;
-    color: #000;
 }
 ul.posts h2{
     margin-top: 10px;
@@ -507,44 +511,28 @@ footer{
     }
 }
 
-/*目录生成插件toc*/
-#toc {
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    position: fixed;
-    background: #333;
-    box-shadow: inset -5px 0 5px 0px #000;
-    width: 150px;
-    padding-top: 20px;
-    color: #fff;
+/* 文章目录 */
+#markdown-toc {
+    display: none;
 }
 
-#toc ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+#catalog-menu{
+    background: #ccc;
+    position: absolute;
+    right:-42%;
+    top:0px;
+    width:40%;
+    border-radius: 10px;
+}
+#catalog-menu .catalog-menu-content{
+    padding: 10px 0; 
+}
+#catalog-menu ul{
+    padding-left: 30px;
+}
+#catalog-menu ul li{
+    color:#000;
+    font-size: 15px;
+    line-height: 25px;
 }
 
-#toc li {
-    padding: 5px 10px;
-}
-
-#toc a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-
-#toc .toc-h2 {
-    padding-left: 10px;
-}
-
-#toc .toc-h3 {
-    padding-left: 20px;
-}
-
-#toc .toc-active {
-    background: #336699;
-    box-shadow: inset -5px 0px 10px -5px #000;
-}

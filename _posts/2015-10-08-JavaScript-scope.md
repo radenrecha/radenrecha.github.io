@@ -9,6 +9,9 @@ categories: JavaScript
 
 ---
 
+- 目录
+{:toc}
+
 ####JavaScript作用域：全局作用域(Global Scope)&局部作用域(Local Scope)
 
 作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。

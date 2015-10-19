@@ -11,6 +11,9 @@ categories: JavaScript
 
 ####注
 
+- 目录
+{:toc}
+
 1.以下内容并非原创，总结摘抄自网上别人的博客，供自己学习使用，侵删。
 
 ####Javascript数据结构

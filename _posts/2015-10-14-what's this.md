@@ -10,6 +10,9 @@ featured_image: /images/cover.jpg
 
 ---
 
+* content
+{:toc}
+
 在JavaScript中，this 的概念比较复杂。由于其运行期绑定的特性，JavaScript 中的 this它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函数调用，和使用 apply 或 call 调用。下面我们将按照调用方式的不同，分别讨论 this 的含义。
 
 
@@ -158,7 +161,9 @@ apply和call能够强制改变函数执行时的当前对象，让this指向其�
 
 apply用于改变函数执行时的当前对象，当无参数时，当前对象为window，有参数时当前对象为该参数。
 
-####情况五：特殊情况--在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window
+####情况五：特殊情况
+
+--在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window
 
 测试5.1：匿名函数，也就是例子1
 

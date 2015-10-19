@@ -9,6 +9,9 @@ categories: JavaScript
 
 ---
 
+- 目录
+{:toc}
+
 #####1、onchange事件
 对于text文本框来说，当光标离开元素的时候再去判断值是否发生了变化，如果发生了变化则触发onchange事件。
 
