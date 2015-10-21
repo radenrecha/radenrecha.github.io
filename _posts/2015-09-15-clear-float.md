@@ -2,7 +2,7 @@
 layout: post
 title:  "清浮动的八种方法"
 date:  2015-09-15
-categories: HTM
+categories: HTMLCSS
 ---
 
 #####清浮动的八种方法学习笔记

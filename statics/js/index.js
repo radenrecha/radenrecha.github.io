@@ -19,8 +19,8 @@ $(document).ready(function(){
 
     //右边目录
     if (typeof $('#markdown-toc').html() === 'undefined') {
-        $('#content').hide();
+        $('#catalog-menu').hide();
     } else {
-        $('#catalog-menu .catalog-menu-content').html('<ul>' + $('#markdown-toc').html() + '</ul>');
+        $('#catalog-menu .catalog-menu-content').html($('#markdown-toc').html());
     }
 });
