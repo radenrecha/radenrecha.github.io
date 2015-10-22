@@ -10,7 +10,6 @@ body {
     font-family: 'Bitter', 'Heiti SC', 'Microsoft YaHei', sans-serif;
     font-size: 16px;
     line-height: 28px;
-    color: #222;
     font-weight: 400;
     height: 100%;
     min-width: 650px;
@@ -31,7 +30,6 @@ h1,h2,h3,h4,h5,h6{
     min-height: 960px;
     position: relative;
 }
-
 /*
     index&post
     main-contain
@@ -40,11 +38,9 @@ h1,h2,h3,h4,h5,h6{
     width:60%;
     margin: 10px auto;
 }
-@media (max-width: 960px) {
-    #main-contain {
-        width: 100%;
-        overflow: visible;
-    }
+.container{
+    width:60%;
+    margin: 0px auto; 
 }
 /*
     index&post
@@ -70,23 +66,6 @@ article .container h1{
     text-align: center;
     color:#00688B;
 }
-@media (max-width: 960px) {
-    article {
-        display: block;
-    }
-    article .container {
-        padding: 25px;
-    }
-}
-@media (max-width: 960px) {
-    article {
-        width: 100%;
-        overflow: visible;
-    }
-    article .container {
-        padding: 50px !important;
-    }
-}
 article p {
     margin-bottom: 1em;
 }
@@ -96,14 +75,6 @@ article li {
     list-style-type: disc;
 }
 
-@media (max-width: 960px) {
-    article li {
-        margin-left: 2em;
-
-        margin-bottom: 5px;
-        margin-top: 10px;
-    }
-}
 article a:link,a:visited {
     color: #CE2323;
     text-decoration: none;
@@ -245,45 +216,30 @@ ul.posts p {
 
 /* header */
 header{
-    padding: 4px 0;
     font-family: "Consolas",'Georgia','Microsoft YaHei',sans-serif;
     background:#fbfbfb;
     font-size: 1.4em;
     box-shadow: 0 2px 5px #ccc;
-    vertical-align: top;
     height: 100%;
-    white-space: normal;
 }
-.header-container{
-    width:60%;
-    margin: 0px auto; 
-}
-.phone-info,.more-info{
-    display: inline-block;
-}
-@media screen and (max-width: 992px) {
-  .phone-info {
-    text-align: left;
-  }
-}
-.phone-info span,.more-info span{
-    color:#2e8b57;
-}
-.more-info {
-  float: right;
-}
-.more-info li {
+#nav li, #nav li a{
   display: inline-block;
-  margin-left: 15px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #3b3b3b;
 }
-@media screen and (max-width: 992px) {
-  .more-info {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .more-info li:first-child {
-    margin-left: 0;
-  }
+#nav li a:hover{
+  background: #eee;
+}
+#nav{
+  background: none;
+}
+#nav .active{
+  background: #eee;
+}
+.toggle-btn{
+  display: none;
 }
 
 
@@ -304,33 +260,29 @@ footer{
 
 /*gategory*/
 .category-menu{
-    width:25%;
+    min-width: 200px;
     display: inline-block;
     border-radius: 10px;
     background: #ccc;
     box-shadow: 0 2px 5px #666;
     color: #333;
 }
-.category-content{
-    padding: 20px 0;
-}
-
-.category-content h3{
+.category-menu h3{
     margin: 0;
     line-height: 2.4em;
     color: #104954;
     text-align: center;
 }
-.category-content ul{
+.category-menu ul{
     font-variant: small-caps;
 }
-.category-content li{
+.category-menu li{
     list-style: none;
     display: block;
     position: relative;
-    padding: 6px 25px;
+    padding: 6px 25px 6px 8px;
     border-radius: 5px;
-    margin: 10px 18%;
+    margin: 10px 20px;
     line-height: 1.3em;
 
     transition: all 300ms;
@@ -340,16 +292,17 @@ footer{
 
     cursor: pointer;
 }
-.category-content li:hover{
+.category-menu li:hover{
     
     background-color: #CE2323;
     color: #FFF;
 }
-.category-content li:hover span{
+.category-menu li:hover span{
     color: #FFF;
 }
-.category-content li span{
+.category-menu li span{
     position: absolute;
+    margin-left:40px;
     right:0px;
     width: 22px;
     line-height: 1.3em;
@@ -357,9 +310,6 @@ footer{
     border-radius: 11px;
     background-color: #CE2323;
     color: #FFF;
-}
-#categoryShow:hover {
-    background-position:0 -40px;
 }
 
 
@@ -400,82 +350,77 @@ footer{
 
 
 /*comment*/
-.ds-thread{
-    margin-bottom: 40px;
-    border-radius: 5px;
-}
-
-.ds-thread .ds-sync,.ds-meta{
-    display: none !important;
-}
-
-.ds-thread .ds-comments-tab-duoshuo{
-    border: none !important;
-    background: none !important;
-}
-
-.ds-thread .ds-avatar img {
-    margin-top: 12% !important;
-    margin-left: 6% !important;
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 40px !important;
-    border: 6px solid #FFF !important;
-    box-shadow: 3px 2px 1px #CE2323 !important;
-}
-
-.ds-post-self .ds-avatar img {
-    margin-top: 12% !important;
-    margin-left: 20% !important;
-}
-
-.ds-comment-body .ds-comment-header{
-    padding-top: 6px !important;
-}
-
-.ds-comment-body .ds-comment-header a:link,a:visited,a:active,a:hover{
-    color: #CE2323 !important;
-}
-
-.ds-comment-body .ds-comment-footer{
-    padding-top: 15px !important;
-    margin-left: -100px !important;
-    text-align: right !important;
-}
-
-.ds-thread .ds-comment-body{
-    padding: 20px 0 20px 110px !important;
-}
-
-.ds-thread .ds-replybox{
-    padding: 20px 0 20px 100px !important;
-    margin: 10px !important;
-    box-shadow: 2px 2px 5px #000 !important;
-}
-
-.ds-replybox .ds-post-button{
-    margin-right: 20px !important;
-    width: 80px !important;
-    background-color: #555 !important;
-}
-
-.ds-replybox .ds-post-button:hover{
-    margin-right: 20px !important;
-    width: 80px !important;
-    background-color: #CE2323 !important;
-}
-
-.ds-thread .ds-comment-body{
-    box-shadow: 2px 2px 5px #000 !important;
-}
-
-.ds-replybox .ds-textarea-wrapper{
-    height: 70px !important;
-}
-.ds-replybox .ds-textarea-wrapper,.ds-post-options{
-    border: none !important;
-    background: none !important;
-} 
+/* .ds-thread{
+     margin-bottom: 40px;
+     border-radius: 5px;
+ }
+ 
+ .ds-thread .ds-sync,.ds-meta{
+     display: none !important;
+ }
+ 
+ .ds-thread .ds-comments-tab-duoshuo{
+     border: none !important;
+     background: none !important;
+ }
+ 
+ .ds-thread .ds-avatar img {
+     margin-top: 12% !important;
+     margin-left: 6% !important;
+     width: 60px !important;
+     height: 60px !important;
+     border-radius: 40px !important;
+     border: 6px solid #FFF !important;
+     box-shadow: 3px 2px 1px #CE2323 !important;
+ }
+ 
+ .ds-post-self .ds-avatar img {
+     margin-top: 12% !important;
+     margin-left: 20% !important;
+ }
+ 
+ .ds-comment-body .ds-comment-header{
+     padding-top: 6px !important;
+ }
+ .ds-comment-body .ds-comment-footer{
+     padding-top: 15px !important;
+     margin-left: -100px !important;
+     text-align: right !important;
+ }
+ 
+ .ds-thread .ds-comment-body{
+     padding: 20px 0 20px 110px !important;
+ }
+ 
+ .ds-thread .ds-replybox{
+     padding: 20px 0 20px 100px !important;
+     margin: 10px !important;
+     box-shadow: 2px 2px 5px #000 !important;
+ }
+ 
+ .ds-replybox .ds-post-button{
+     margin-right: 20px !important;
+     width: 80px !important;
+     background-color: #555 !important;
+ }
+ 
+ .ds-replybox .ds-post-button:hover{
+     margin-right: 20px !important;
+     width: 80px !important;
+     background-color: #CE2323 !important;
+ }
+ 
+ .ds-thread .ds-comment-body{
+     box-shadow: 2px 2px 5px #000 !important;
+ }
+ 
+ .ds-replybox .ds-textarea-wrapper{
+     height: 70px !important;
+ }
+ .ds-replybox .ds-textarea-wrapper,.ds-post-options{
+     border: none !important;
+     background: none !important;
+ } */ 
 
 /* 回到顶部 */
  #returnTop {
@@ -504,35 +449,104 @@ footer{
     background-position:-28px 0px;
 }
 
-@media (max-width: 960px){
-    #returnTop {
-        position: fixed;
-        right: 9px;
-    }
-}
-
 /* 文章目录 */
-#markdown-toc {
+#markdown-toc{
+    display: none;
+    padding:0px;
+    margin: 0px;
+
+}
+#markdown-toc ul{
+    padding:0px;
+    margin: 0px;
+}
+#markdown-toc ul li{
+    display: none;
+    padding:0px;
+    margin: 0px;
+    color:#000;
+}
+#markdown-toc ul li ul{
     display: none;
 }
-
-#catalog-menu{
-    background: #ccc;
-    position: absolute;
-    right:-42%;
-    top:0px;
-    width:40%;
+.catalog-menu{
+    min-width: 200px;
+    display: inline-block;
     border-radius: 10px;
+    background: #ccc;
+    box-shadow: 0 2px 5px #666;
+    color: #333;
 }
-#catalog-menu .catalog-menu-content{
+.catalog-menu .catalog-menu-content{
     padding: 10px 0; 
 }
-#catalog-menu ul{
-    padding-left: 30px;
-}
-#catalog-menu ul li{
-    color:#000;
-    font-size: 15px;
-    line-height: 25px;
-}
 
+
+/* Media Queries */
+@media (max-width: 767px){
+    
+    /* 影藏右侧的目录和菜单栏 */
+    .category-menu,.catalog-menu{
+        display: none!important;
+    }
+    /* 切换按钮 */
+    .toggle-btn{
+        display: inline-block;
+        font-size: 25px;
+        text-decoration: none;
+        background: #000;
+        color: #fff;
+        padding: 7px 10px;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+    }
+  
+    /* 隐藏关闭按钮 */
+    #nav .close{
+        display: none;
+    }
+  
+    /* 导航为目标状态的时候显示关闭按钮 */
+    #nav:target .close{
+        display: inline-block;
+    }
+  
+    /* 初始隐藏导航 */
+    #nav{
+        display: none;
+    }
+  
+    /* 导航为目标状态时的样式 */
+    #nav:target{
+        display: block;
+        position: absolute;
+        top: 0;
+        padding-top: 70px;
+        width: 100%;
+    }
+    /* 目标状态下的导航的 ul 标签 */
+    #nav:target ul{
+        background: #000;
+    }
+    /* 目标状态下的导航的 li 与 a */
+    #nav:target li, #nav:target li a{
+        display: block;
+        color: #eee;
+        text-align: left;
+    }
+    /* 目标状态下的导航的列表下的 a 标签的悬停样式 */
+    #nav:target li a:hover{
+        background: #3b3b3b;
+    }
+    /* 目标状态下导航的激活状态的样式 */
+    #nav:target .active{
+        background: #272727;
+    }
+
+    /*设置图像宽度*/
+    article img{
+        width:100%;
+        max-width: 100%;
+    }
+}
