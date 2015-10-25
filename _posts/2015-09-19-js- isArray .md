@@ -5,24 +5,23 @@ date:  2015-09-19
 categories: JavaScript
 ---
 
-#####js判断是否为数组的函数isArray()学习笔记
+js判断是否为数组的函数isArray()学习笔记
 
 ---
 
-####注
 
 - 目录
 {:toc}
 
 1.以下内容并非原创，总结摘抄自网上别人的博客，供自己学习使用，侵删。
 
-####Javascript数据结构
+###Javascript数据结构
 
-#####动态类型
+####动态类型
 
 >JavaScript 是一种弱类型或者说动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：
 
-#####数据类型
+####数据类型
 
 最新的ECMAScript定义了7种数据类型
 
@@ -39,9 +38,9 @@ categories: JavaScript
 
 > Object
 
-####js判断数组类型的方法
+###js判断数组类型的方法
 
-#####1、typeof操作符
+####1、typeof操作符
 对于Function，String，Number，Undefined等几种类型的对象来说，他完全可以胜任，但是为Array时,我们并不能得到一个array的返回值
 
         function a1(){
@@ -61,7 +60,7 @@ categories: JavaScript
         var a5 = [1,2,3];
         console.log(typeof(a5));//object
 
-#####2、instanceof操作符
+####2、instanceof操作符
 instance，故名思义，实例，例子，所以instanceof用于判断一个变量是否某个对象的实例，是一个三目运算式---和typeof最实质上的区别
         
         a instanceof b?alert("true"):alert("false")
@@ -71,7 +70,7 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
     var b1 = [1,2,3];
     console.log(b1 instanceof Array);//true
 
-#####3、constructor操作符
+####3、constructor操作符
 在W3C定义中的定义：constructor属性返回对创建此对象的数组函数的引用,就是返回对象相对应的构造函数。从定义上来说跟instanceof不太一致，但效果都是一样的。
 
 如: 
@@ -99,14 +98,15 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
         console.log((123).constructor == Number);
         console.log(true.constructor == Boolean);
 
-#####4、较为严谨并且通用的方法：
+####4、较为严谨并且通用的方法：
 
         function isArray(object){
             return object && typeof object==='object' &&
                 Array == object.constructor;
         }
 
-####注意
+注意
+
 >使用instaceof和construcor,被判断的array必须是在当前页面声明的！比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个array，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；
 
 原因
@@ -124,7 +124,7 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
 
 返回结果为两个False，让人大失所望。
 
-#####5、特性判断法
+####5、特性判断法
 
         function isArray(object){
         return  object && typeof object==='object' &&    
@@ -136,7 +136,7 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
 
 有length和splice并不一定是数组，因为可以为对象添加属性，而不能枚举length属性，才是最重要的判断因子。
 
-#####6、最简单的方法
+####6、最简单的方法
        
         var isArray = function(obj) { 
             return Object.prototype.toString.call(obj) === '[object Array]'; 
@@ -146,7 +146,7 @@ call改变toString的this引用为待检测的对象，返回此对象的字符�
 
 与前面几个方案不同，这个方法很好的解决了跨frame对象构建的问题，经过测试，各大浏览器兼容性也很好，可以放心使用。一个好消息是，很多框架，比如jQuery、Base2等等，都计划借鉴此方法以实现某些特殊的，比如数组、正则表达式等对象的类型判定，不用我们自己写了。
 
-#####7、和在一起就是
+####7、和在一起就是
 
         if (value instanceof Array ||
             (!(value instanceof Object) &&
@@ -158,7 +158,7 @@ call改变toString的this引用为待检测的对象，返回此对象的字符�
             return 'array';
         }
 
-#####参考链接：
+###参考链接：
 [1、js数据类型判断和数组判断](http://www.cnblogs.com/mofish/p/3388427.html);
 
 [2、js如何判断一个对象是不是Array](http://www.nowamagic.net/librarys/veda/detail/1250)

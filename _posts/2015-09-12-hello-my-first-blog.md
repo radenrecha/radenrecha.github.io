@@ -5,7 +5,7 @@ date: 2015-09-12  13:00:00
 categories: journal
 ---
 
-#####第一次用jekyll博客发帖
+第一次用jekyll博客发帖
 
 - 目录
 {:toc}
