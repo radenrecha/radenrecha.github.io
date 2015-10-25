@@ -21,6 +21,9 @@ h1,h2,h3,h4,h5,h6{
     padding:0px;
     margin: 0px;
 }
+li{
+    list-style: none;
+}
 /*
     default
     blog-contain
@@ -73,14 +76,6 @@ article li {
     margin-left: 3em;
     margin-bottom: 9px;
     list-style-type: disc;
-}
-
-article a:link,a:visited {
-    color: #CE2323;
-    text-decoration: none;
-}
-article a:hover,a:active {
-    text-decoration: none;
 }
 article .posts h1{
     font-size: 1.8em;
@@ -144,6 +139,10 @@ article .post-comment{
     font-size: 24px;
     font-weight: 600;
     border-bottom: 5px solid #CE2323;
+}
+article img{
+    width:100%;
+    max-width: 100%;
 }
 
 /* paginator */
@@ -350,77 +349,77 @@ footer{
 
 
 /*comment*/
-/* .ds-thread{
+/*.ds-thread{
      margin-bottom: 40px;
      border-radius: 5px;
  }
  
  .ds-thread .ds-sync,.ds-meta{
-     display: none !important;
+     display: none;
  }
  
  .ds-thread .ds-comments-tab-duoshuo{
-     border: none !important;
-     background: none !important;
+     border: none;
+     background: none;
  }
  
  .ds-thread .ds-avatar img {
-     margin-top: 12% !important;
-     margin-left: 6% !important;
-     width: 60px !important;
-     height: 60px !important;
-     border-radius: 40px !important;
-     border: 6px solid #FFF !important;
-     box-shadow: 3px 2px 1px #CE2323 !important;
+     margin-top: 12%;
+     margin-left: 6%;
+     width: 60px;
+     height: 60px;
+     border-radius: 40px;
+     border: 6px solid #FFF;
+     box-shadow: 3px 2px 1px #CE2323;
  }
  
  .ds-post-self .ds-avatar img {
-     margin-top: 12% !important;
-     margin-left: 20% !important;
+     margin-top: 12%;
+     margin-left: 20%;
  }
  
  .ds-comment-body .ds-comment-header{
-     padding-top: 6px !important;
+     padding-top: 6px;
  }
  .ds-comment-body .ds-comment-footer{
-     padding-top: 15px !important;
-     margin-left: -100px !important;
-     text-align: right !important;
+     padding-top: 15px;
+     margin-left: -100px;
+     text-align: right;
  }
  
  .ds-thread .ds-comment-body{
-     padding: 20px 0 20px 110px !important;
+     padding: 20px 0 20px 110px;
  }
  
  .ds-thread .ds-replybox{
-     padding: 20px 0 20px 100px !important;
-     margin: 10px !important;
-     box-shadow: 2px 2px 5px #000 !important;
+     padding: 20px 0 20px 100px;
+     margin: 10px;
+     box-shadow: 2px 2px 5px #000;
  }
  
  .ds-replybox .ds-post-button{
-     margin-right: 20px !important;
-     width: 80px !important;
-     background-color: #555 !important;
+     margin-right: 20px;
+     width: 80px;
+     background-color: #555;
  }
  
  .ds-replybox .ds-post-button:hover{
-     margin-right: 20px !important;
-     width: 80px !important;
-     background-color: #CE2323 !important;
+     margin-right: 20px;
+     width: 80px;
+     background-color: #CE2323;
  }
  
  .ds-thread .ds-comment-body{
-     box-shadow: 2px 2px 5px #000 !important;
+     box-shadow: 2px 2px 5px #000;
  }
  
  .ds-replybox .ds-textarea-wrapper{
-     height: 70px !important;
+     height: 70px;
  }
  .ds-replybox .ds-textarea-wrapper,.ds-post-options{
-     border: none !important;
-     background: none !important;
- } */ 
+     border: none;
+     background: none;
+ }*/
 
 /* 回到顶部 */
  #returnTop {
@@ -452,25 +451,9 @@ footer{
 /* 文章目录 */
 #markdown-toc{
     display: none;
-    padding:0px;
-    margin: 0px;
-
-}
-#markdown-toc ul{
-    padding:0px;
-    margin: 0px;
-}
-#markdown-toc ul li{
-    display: none;
-    padding:0px;
-    margin: 0px;
-    color:#000;
-}
-#markdown-toc ul li ul{
-    display: none;
 }
 .catalog-menu{
-    min-width: 200px;
+    min-width: 240px;
     display: inline-block;
     border-radius: 10px;
     background: #ccc;
@@ -480,15 +463,46 @@ footer{
 .catalog-menu .catalog-menu-content{
     padding: 10px 0; 
 }
+.catalog-menu ul{
+    padding:0px;
+    margin:0px;
+}
+.catalog-menu ul li{
+    text-indent: 2em;
+}
+.catalog-menu a{
+    color:#104954;
+}
+.catalog-menu a:visited{
+    color:#104954;
+}
+.catalog-menu ul li ul{
+    display: none;
+}
+
 
 
 /* Media Queries */
 @media (max-width: 767px){
     
-    /* 影藏右侧的目录和菜单栏 */
+    /* 隐藏右侧的目录和菜单栏 */
     .category-menu,.catalog-menu{
-        display: none!important;
+        display: none !important;
+    } 
+    #main-contain{
+        width:100%!important;
+        margin: 10px auto;
     }
+    .container{
+        width:100%!important;
+    }
+    article{
+        width:100%;
+    }
+    header{
+        height: 50px;
+    }
+    
     /* 切换按钮 */
     .toggle-btn{
         display: inline-block;
@@ -498,8 +512,8 @@ footer{
         color: #fff;
         padding: 7px 10px;
         position: absolute;
-        left: 30px;
-        top: 10px;
+        left: 100px;
+        top: 4px;
     }
   
     /* 隐藏关闭按钮 */
@@ -520,14 +534,16 @@ footer{
     /* 导航为目标状态时的样式 */
     #nav:target{
         display: block;
+        z-index: 100;
         position: absolute;
-        top: 0;
+        top: 0px;
         padding-top: 70px;
         width: 100%;
     }
     /* 目标状态下的导航的 ul 标签 */
     #nav:target ul{
         background: #000;
+        
     }
     /* 目标状态下的导航的 li 与 a */
     #nav:target li, #nav:target li a{
@@ -544,9 +560,5 @@ footer{
         background: #272727;
     }
 
-    /*设置图像宽度*/
-    article img{
-        width:100%;
-        max-width: 100%;
-    }
+    
 }
