@@ -9,13 +9,25 @@ layout: default
             <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
             
             {{ content }}
-
-            <div class="post-comment">
-                <span>Comments</span>
-                <!-- 多说评论框 start -->
-                <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="limingyang2012.github.io{{ page.url }}"></div>
-                <!-- 多说评论框 end -->
-            </div>
+            
+            <ul class="pagination">
+                {% if page.previous.url %}
+                <li class="previous">
+                    <a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
+                </li>
+                {% endif %}
+                {% if page.next.url %}
+                <li class="next">
+                    <a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
+                </li>
+                {% endif %}
+            </ul>           
+        </div>
+        <div class="post-comment">
+            <span>Comments</span>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="limingyang2012.github.io{{ page.url }}"></div>
+            <!-- 多说评论框 end -->
         </div>
     </article>
     <!--右边目录-->
