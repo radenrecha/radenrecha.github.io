@@ -50,6 +50,7 @@ li{
     article
 */
 article{
+    margin-top: 40px;
     vertical-align: top;
     height: 100%;
     white-space: normal;
@@ -57,7 +58,7 @@ article{
     display: inline-block;
     position: relative;
     background: #ccc;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: 0 2px 5px #666;
 }
 article .container {
@@ -138,10 +139,10 @@ section {
 .paginator a{
     margin: 0 15px;
     font-weight: 600;
-    color:#9F79EE!important;
+    color:#9d6212!important;
 }
 .paginator a:hover{
-    color:#9400D3!important;
+    color:#9d6212!important;
 }
 
 
@@ -153,13 +154,16 @@ article ul{
     margin-top: 20px;
 
 }
+article img{
+    max-width:100%;
+}
 ul.posts li {
     list-style: none;
     margin: 0 2em 20px;
     display: block;
-    background: #458B74;
+    background: #458b74;
     padding:4px 40px;
-    border-radius: 10px;
+    border-radius: 6px;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -199,30 +203,26 @@ ul.posts p {
 
 /* header */
 header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
     font-family: "Consolas",'Georgia','Microsoft YaHei',sans-serif;
-    background:#fbfbfb;
+    background:#8FBC8F;
     font-size: 1.4em;
-    box-shadow: 0 2px 5px #ccc;
-    height: 100%;
+    height: 44px;
+    z-index:10;
 }
+
 #nav li, #nav li a{
   display: inline-block;
-  padding: 7px 10px;
-  border-radius: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
   text-decoration: none;
   color: #3b3b3b;
 }
 #nav li a:hover{
   background: #eee;
-}
-#nav{
-  background: none;
-}
-#nav .active{
-  background: #eee;
-}
-.toggle-btn{
-  display: none;
 }
 
 
@@ -232,8 +232,7 @@ footer{
   height: 100%;
   display: block;
   padding: 2px 0;
-  background:#fbfbfb;
-  box-shadow: 0 -2px 5px #ccc;
+  color:#fff;
 }
 .footer-container{
     width:50%;
@@ -243,9 +242,10 @@ footer{
 
 /*gategory*/
 .category-menu{
+    margin-top: 40px;
     min-width: 200px;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 6px;
     background: #ccc;
     box-shadow: 0 2px 5px #666;
     color: #333;
@@ -296,7 +296,6 @@ footer{
 }
 
 
-
 /*catalog*/
 
 /* weixin */
@@ -345,77 +344,6 @@ footer{
     font-weight: 600;
     border-bottom: 5px solid #CE2323;
 }
-/*.ds-thread{
-     margin-bottom: 40px;
-     border-radius: 5px;
- }
- 
- .ds-thread .ds-sync,.ds-meta{
-     display: none;
- }
- 
- .ds-thread .ds-comments-tab-duoshuo{
-     border: none;
-     background: none;
- }
- 
- .ds-thread .ds-avatar img {
-     margin-top: 12%;
-     margin-left: 6%;
-     width: 60px;
-     height: 60px;
-     border-radius: 40px;
-     border: 6px solid #FFF;
-     box-shadow: 3px 2px 1px #CE2323;
- }
- 
- .ds-post-self .ds-avatar img {
-     margin-top: 12%;
-     margin-left: 20%;
- }
- 
- .ds-comment-body .ds-comment-header{
-     padding-top: 6px;
- }
- .ds-comment-body .ds-comment-footer{
-     padding-top: 15px;
-     margin-left: -100px;
-     text-align: right;
- }
- 
- .ds-thread .ds-comment-body{
-     padding: 20px 0 20px 110px;
- }
- 
- .ds-thread .ds-replybox{
-     padding: 20px 0 20px 100px;
-     margin: 10px;
-     box-shadow: 2px 2px 5px #000;
- }
- 
- .ds-replybox .ds-post-button{
-     margin-right: 20px;
-     width: 80px;
-     background-color: #555;
- }
- 
- .ds-replybox .ds-post-button:hover{
-     margin-right: 20px;
-     width: 80px;
-     background-color: #CE2323;
- }
- 
- .ds-thread .ds-comment-body{
-     box-shadow: 2px 2px 5px #000;
- }
- 
- .ds-replybox .ds-textarea-wrapper{
-     height: 70px;
- }
- .ds-replybox .ds-textarea-wrapper,.ds-post-options{
-     border: none;
-     background: none;
- }*/
 
 /* 回到顶部 */
  #returnTop {
@@ -449,9 +377,10 @@ footer{
     display: none;
 }
 .catalog-menu{
+    margin-top: 40px;
     min-width: 240px;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 6px;
     background: #ccc;
     box-shadow: 0 2px 5px #666;
     color: #333;
@@ -542,64 +471,5 @@ footer{
     }
     header{
         height: 50px;
-    }
-    
-    /* 切换按钮 */
-    .toggle-btn{
-        display: inline-block;
-        font-size: 25px;
-        text-decoration: none;
-        background: #000;
-        color: #fff;
-        padding: 7px 10px;
-        position: absolute;
-        left: 100px;
-        top: 4px;
-    }
-  
-    /* 隐藏关闭按钮 */
-    #nav .close{
-        display: none;
-    }
-  
-    /* 导航为目标状态的时候显示关闭按钮 */
-    #nav:target .close{
-        display: inline-block;
-    }
-  
-    /* 初始隐藏导航 */
-    #nav{
-        display: none;
-    }
-  
-    /* 导航为目标状态时的样式 */
-    #nav:target{
-        display: block;
-        z-index: 100;
-        position: absolute;
-        top: 0px;
-        padding-top: 70px;
-        width: 100%;
-    }
-    /* 目标状态下的导航的 ul 标签 */
-    #nav:target ul{
-        background: #000;
-        
-    }
-    /* 目标状态下的导航的 li 与 a */
-    #nav:target li, #nav:target li a{
-        display: block;
-        color: #eee;
-        text-align: left;
-    }
-    /* 目标状态下的导航的列表下的 a 标签的悬停样式 */
-    #nav:target li a:hover{
-        background: #3b3b3b;
-    }
-    /* 目标状态下导航的激活状态的样式 */
-    #nav:target .active{
-        background: #272727;
-    }
-
-    
+    }    
 }
