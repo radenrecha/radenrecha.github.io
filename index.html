@@ -1,84 +1,34 @@
 ---
 layout: default 
 ---      
-<div id="main-contain">
-    <!--menu-->
-    <article>
-        <div class="container cate-posts">
-            <h1>[ POSTS ]</h1>
-            <ul class="posts" data-cate="all" >    
-                {% for post in  paginator.posts %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}" >
-                        <h2>{{ post.title }}</h2>
-                        <span class="date">{{ post.date | date_to_string }}</span>
-                        {{ post.excerpt }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-            <!-- 分类菜单内容 -->
-            {% for category in site.categories %}
-            <ul class="posts cates" data-cate="{{category | first}}">
-                {% for posts in category  %}
-                {% for post in posts %}
-                {% if post.url %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}" >
-                        <h2>{{ post.title }}</h2>
-                        <span class="date">{{ post.date | date_to_string }}</span>
-                        {{ post.excerpt }}
-                    </a>
-                </li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %}
-            </ul>
-            {% endfor %}
+<div class="container">
+<div class="home">
+    <div>
+        <div class="circle-parent">
+        <div class="grid-1">
+            <div class="circle">    
+                <div id="circles-1"></div>                                  
+                <h3>Html / Css</h3>                                   
+            </div>
+            <div class="circle">
+                <div id="circles-2"></div>
+                <h3>JavaScript</h3>
+            </div>
         </div>
-
-
-        <!-- 分页代码 http://www.tuicool.com/articles/mIVJ7j-->
-        <div class="paginator">
-            {% if paginator.total_pages > 1 %}
-            <!-- 分页代码 -->
-            {% endif %}
-
-            {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
-            {% endif %}
-
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                  <span class="active">{{ page }}</span>
-                {% elsif page == 1 %}
-                  <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-                {% else %}
-                  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                {% endif %}
-            {% endfor %}
-
-            {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-            {% endif %} 
+        <div class="grid-1">
+            <div class="circle">
+                <div id="circles-3"></div>
+                <h3>jQuery</h3>                                       
+            </div>
+            <div class="circle">
+                <div id="circles-4"></div>
+                <h3>node.js</h3>                                          
+            </div>
         </div>
-    </article>       
-    <!--category-->
-    <div class="category-menu">
-        <div class="category-content">
-            <h3>[ CATEGORY ]</h3>
-            <ul class="category-list">
-                <li data-cate="all">[ all ]<span>{{site.posts | size}}</span></li>
-                    {% for category in site.categories %}
-                <li data-cate="{{ category | first }}">
-                        [ {{ category | first }} ]<span>{{ category | last | size }}</span>
-                </li>
-                    {% endfor %}
-            </ul>
         </div>
     </div>
+
+    <h1>Looking for a job about Web Font-End Developer</h1>
+    <h4>The shortest answer is doing</h4>               
 </div>
-
-
-
-    
+</div>

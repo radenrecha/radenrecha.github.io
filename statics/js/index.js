@@ -24,3 +24,43 @@ $(document).ready(function(){
         $('.catalog-menu .catalog-menu-content').html($('#markdown-toc').html());
     }
 });
+
+
+
+$(function() {
+    var pull = $('#pull');
+    menu = $('nav ul');
+    menuHeight  = menu.height();
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+
+    $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 320 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+});
+
+
+var colors = [['#dfe8ed', '#30bae7'], ['#dfe8ed', '#d74680'], ['#dfe8ed', '#15c7a8'], ['#dfe8ed', '#eb7d4b']];
+                                                            
+var percentage = [70,60,60,20];
+
+for (var i = 1; i <= 5; i++) {
+    var child = document.getElementById('circles-' + i);
+    
+                                        
+    Circles.create({
+        id:         child.id,
+        percentage: percentage[i - 1],
+        radius:     80,
+        width:      15,
+        number:     percentage[i - 1],
+        text:       '%',
+        colors:     colors[i - 1]
+    });
+}

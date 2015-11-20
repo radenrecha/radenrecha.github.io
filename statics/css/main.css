@@ -1,43 +1,184 @@
-
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 body {
-    font-family: 'Bitter', 'Heiti SC', 'Microsoft YaHei', sans-serif;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 400;
-    height: 100%;
-    min-width: 650px;
-    background:url(../../images/bg.jpg);
-    overflow-x: hidden;
-    white-space: nowrap;
+    font-family:"Microsoft YaHei",arial, sans-serif;
+    font-size: 100%;
+    background: #ffffff;
+    color:#555555;
+    background: -webkit-linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background:    -moz-linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background:     -ms-linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background:      -o-linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background:         linear-gradient(90deg, #9bd 10%, #e85 90%); 
 }
-/*
-    default
-    blog-contain
-*/
-#blog-contain{
-    width:100%;
-    min-height: 960px;
-    position: relative;
-}
-/*
-    index&post
-    main-contain
-*/
-#main-contain{
-    width:60%;
-    margin: 10px auto;
+.wrap{
+    margin:0 auto;
+    width:80%;
+
 }
 .container{
-    width:60%;
-    margin: 0px auto; 
+    margin: 20px auto;
+    width:90%;
 }
+
+
+/* home start */
+.home{
+    margin: 200px auto;
+}
+
+.home h3{
+    color:#3c4761;
+    text-align:center;
+    font-weight:600; 
+    padding-top: 1em;
+}
+.circle-parent{
+    text-align: center;
+}
+.grid-1{
+    display: inline-block;
+}
+.circle{
+    display: inline-block;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-bottom: 20px;
+}
+.home h1{
+    padding-top: 40px;
+    font-size: 2.4em;
+    font-family:"Consolas",arial, sans-serif; 
+    color:#da5a41!important;
+    text-align:center;
+    letter-spacing:5px;
+    color:#3c4761;
+} 
+.home h4{
+    padding-top: 40px;
+    font-size: 1.6em;
+    font-family:"Consolas",arial, sans-serif; 
+    color:#9d6212!important;
+    text-align:center;
+    letter-spacing:5px;
+    color:#3c4761;
+}
+/* home end */
+
+
+/* header start */
+.header{
+    display: block;
+    padding: 4% 6%;
+}
+.logo{
+    float:left;
+}
+.cssmenu {
+    float: right;
+    margin-top: 1%;
+}
+.cssmenu > ul > li {
+    display:inline-block;
+    position: relative;
+}
+.cssmenu > ul > li.active a{
+    color:#ffffff;
+    background-color:#FF61A0;
+}
+.cssmenu > ul > li span img {
+    vertical-align: middle;
+}
+.cssmenu > ul > li > a {
+    font-weight:bold;
+    color: #555555;
+    display: block;
+    font-size: 15px;
+    line-height: 1.8em;
+    padding: 24px 26px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.cssmenu > ul > li > a:hover {
+    background-color:#FF61A0;
+    color: #ffffff;
+}
+.top-nav{
+    display: none;
+}
+.nav_bg{
+    background: #464646;
+}
+.clearfix {
+    height: 40px;
+    width: 100%;
+    font-size: 11pt;
+    font-weight: bold;
+    position: relative;
+    z-index: 9999;
+}
+.clearfix ul {
+    padding: 0;
+    margin: 0 auto;
+    display: none;
+    background: #f0f0f0;
+}
+.clearfix li {
+    display: block;
+}
+.clearfix a {
+    color: #555555;
+    font-size:15px;
+    font-weight:bold;
+    text-transform:uppercase;
+    display: block;
+    width:100%;
+    text-indent: 10px;
+    text-align: left;
+    text-decoration: none;
+    line-height: 40px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.clearfix li a {
+    border-bottom: 1px solid rgba(90, 85, 73, 0.17);
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.clearfix li:last-child a {
+    border-right: 0;
+}
+.clearfix a:hover,.clearfix a:active {
+    background: #424242;
+    color:#ffffff;
+}
+.clearfix a#pull {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    position: relative;
+    text-shadow: 0 1px 0 #181717;
+    color: #FFFFFF;
+    background-color: #FF61A0;
+}
+.clearfix a#pull:after {
+    background:url('../../images/nav-icon.png')no-repeat;
+    width: 30px;
+    content:"";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+/* header end */
 /*
     index&post
     article
@@ -192,32 +333,6 @@ ul.posts p {
 .post-date{
     text-align: right;
 }
-
-
-/* header */
-header{
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    font-family: "Consolas",'Georgia','Microsoft YaHei',sans-serif;
-    background:#8FBC8F;
-    font-size: 1.4em;
-    height: 44px;
-    z-index:10;
-}
-
-#nav li, #nav li a{
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #3b3b3b;
-}
-#nav li a:hover{
-  background: #eee;
-}
-
 
 /*footer */
 footer{
@@ -445,24 +560,51 @@ footer{
 
 
 
-/* Media Queries */
-@media (max-width: 767px){
-    
-    /* 隐藏右侧的目录和菜单栏 */
-    .category-menu,.catalog-menu{
-        display: none !important;
-    } 
-    #main-contain{
-        width:100%!important;
-        margin: 10px auto;
+
+/***** Media Quries *****/
+@media only screen and (max-width: 1280px) {
+    .wrap{
+        width:95%;
     }
-    .container{
-        width:100%!important;
+    .home{
+        position: relative;
     }
-    article{
+}
+@media only screen and (max-width: 1024px) {
+    .wrap{
+        width:95%;
+    }
+    .logo{
+        width: 30%;
+        float:left;
+    }
+    .cssmenu{
+        margin-top: 24px;
+    }
+    .cssmenu > ul > li > a {
+        font-size: 14px;
+        line-height: 1.6em;
+        padding: 14px 12px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .wrap{
+        width:95%;
+    }
+
+    .logo{
+        text-align:center;
+        float:none;
         width:100%;
+        margin-bottom: 4%;
     }
-    header{
-        height: 50px;
-    }    
+    .cssmenu {
+        display: none;
+    }
+    .top-nav{
+        display:block;
+    }
+    .home{
+        margin: 0px auto;
+    }
 }
