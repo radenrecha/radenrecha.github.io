@@ -1,8 +1,7 @@
-###本博客的最初版本是[Strange Case](http://thephuse.github.io/strange_case/)
 
-###不过我已经完全改变了其样式。目前是第一版本，后续会慢慢更新。暂时有很多不完美的地方。
+###博客已经全新改版了
 
-###博客大体框架已经有了，下一步增加自适应。
+###增加了首页，暂时移动端支持还是有点问题还需要调试
 
 ### License
 * [MIT](http://opensource.org/licenses/MIT)
