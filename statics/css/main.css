@@ -263,7 +263,6 @@ h5{
     line-height: 1.8em;
     padding: 12px 12px;
     margin-right: 0px;
-    text-transform: uppercase;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
@@ -349,12 +348,12 @@ h5{
 }
 /* header end */
 
-/*
-    index&post
-    article
-*/
-
-
+/* footer start */
+.footer{
+    width:100%;
+    text-align: center;
+}
+/* footer end */
 
 /* paginator */
 .paginator{

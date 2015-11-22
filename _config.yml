@@ -15,3 +15,11 @@ paginate_path: "page:num"
 #pygments: true
 highlighter: true
 baseurl: ""
+
+
+# Site settings
+name:             limingyang2012
+author:
+  name:           limingyang2012
+  email:          "limingyang2012@zju.edu.cn"
+  uri:            "limingyang2012.github.io"
