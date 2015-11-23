@@ -6,8 +6,13 @@ $(document).ready(function(){
         $(window).scrollTop()>100? $("#returnTop").css("bottom","60px"):$("#returnTop").css("bottom","-200px");
     });
     $("#returnTop").bind("click",function(){
-        $("article").animate({scrollTop: 0},500),
-        $("html,body").animate({scrollTop: 0},500)
+        if($(window).scrollTop != 0){
+            if(!$("html,body").is(":animated")){
+                $("html,body").animate({scrollTop: 0},500)
+            }
+            
+        }
+        
     }); 
 })();
  
