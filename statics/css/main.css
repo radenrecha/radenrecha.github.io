@@ -191,7 +191,6 @@ body {
     max-width:100%;
 }
 .post p{
-    text-indent: 2em;
     font-size: 18px;
     line-height: 26px;
     margin: 5px 0;
@@ -200,11 +199,12 @@ body {
     color: #8B1A1A;
 }
 .post code{
-    font-size: 1em;
+    display: block;
+    
+    font-family: "consolas", 'Heiti SC', sans-serif;
     border-radius: 6px;
     padding: 1px 10px;
-    margin: 0 3px;
-    font-family: "consolas", 'Heiti SC', sans-serif;
+    margin: 0 3px;    
 }
 .post .post-date{
     text-align: right;
@@ -293,8 +293,8 @@ body {
 }
 .catalog-menu-content>li{
     margin-top: 10px;
-    margin-left: 4px;
-    list-style-type :upper-roman;
+    margin-left: 12px;
+    list-style-type :square;
 }
 .catalog-menu-content>li:first-child{
     margin-top: 0;
@@ -305,8 +305,8 @@ body {
 }
 .catalog-menu ul li{
     margin-top: 2px;
-    margin-left: 40px;
-    list-style-type :square;
+    margin-left: 30px;
+    list-style-type :circle;
 }
 .catalog-menu a{
     color:#104954;
@@ -594,4 +594,8 @@ footer{
         width:90%;
         margin: 0px auto; 
     }
+    .post code{
+       max-width: 88%; 
+    }
+    
 }
