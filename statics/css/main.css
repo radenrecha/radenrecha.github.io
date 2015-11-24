@@ -22,6 +22,7 @@ body {
 /* home start */
 .home{
     margin: 200px auto;
+    min-height: 450px;
 }
 
 .home h3{
@@ -54,7 +55,7 @@ body {
 .home h4{
     padding-top: 40px;
     font-size: 1.6em;
-    font-family:"Consolas",arial, sans-serif; 
+    font-family:'Shadows Into Light',cursive,arial, sans-serif; 
     color:#9d6212!important;
     text-align:center;
     letter-spacing:5px;
@@ -63,46 +64,18 @@ body {
 /* home end */
 
 /*blog start*/
-h1{
-    font-size: 1.8em;
-    color:#00688B;
-    margin: 10px 0; 
-}
-h2{
-    font-size: 1.6em;
-    margin: 10px 0;
-    color:#104954;
-    margin: 10px 0; 
-}
-h3{
-    font-size: 1.4em;
-    color: #CE2323;
-    margin: 10px 0; 
-}
-h4{
-    display: block;
-    font-size: 1.2em;
-    color:#104954;
-    margin: 10px 0;   
-}
-h5{
-    display: block;
-    font-size: 1em;
-    font-weight: normal;
-    color:#222;
-    margin: 10px 0; 
-}
 /* blog cate start*/
-.cate-content{
-    width: 90%;
+.content{  
+    width: 85%;
     margin: 60px auto; 
-    min-height: 700px;
+    min-height: 740px;
 }
 .cate-posts{
-    margin-top:40px;
+    position: relative;
+    margin-top:20px;
     vertical-align: top;
     height: 100%;
-    width: 75%;
+    width: 80%;
     white-space: normal;
     display: inline-block;
     background: #ccc;
@@ -111,6 +84,8 @@ h5{
 }
 .cate-posts .title{
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .cate-posts ul.posts li {
     list-style: none;
@@ -136,8 +111,10 @@ h5{
 
 /*gategory start*/
 .category{
-    margin-top: 40px;
-    min-width: 200px;
+    position: absolute;
+    top:0;
+    right:-210px;
+    width: 200px;
     display: inline-block;
     border-radius: 6px;
     background: #ccc;
@@ -161,12 +138,10 @@ h5{
     border-radius: 5px;
     margin: 10px 20px;
     line-height: 1.3em;
-
     transition: all 300ms;
     -webkit-transition: all 300ms;
     -moz-transition: all 300ms;
     -o-transition: all 300ms;
-
     cursor: pointer;
 }
 .category li:hover{
@@ -191,31 +166,43 @@ h5{
 
 
 /*blog post start*/
-.content{
-    position: relative;
-    width:80%;
-    margin: 60px auto; 
-    min-height: 700px;
-    background-color: #ccc;
-}
 .post {
-     padding: 20px;
-     max-width: 100%;
+    position:relative; 
+    margin-top:20px;
+    vertical-align: top;
+    height: 100%;
+    width: 78%;
+    white-space: normal;
+    display: inline-block;
+    background: #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px #666;
+}
+.post-content{
+    padding: 2%;
+}
+
+.post .title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .post img{
     max-width:100%;
 }
 .post p{
+    text-indent: 2em;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 26px;
     margin: 5px 0;
 }
-.post .title{
-    text-align: center;
+.post a{
+    color: #8B1A1A;
 }
 .post code{
+    font-size: 1em;
     border-radius: 6px;
-    padding: 1px 5px;
+    padding: 1px 10px;
     margin: 0 3px;
     font-family: "consolas", 'Heiti SC', sans-serif;
 }
@@ -236,6 +223,100 @@ h5{
     font-weight: 600;
     border-bottom: 5px solid #CE2323;
 }
+
+/* Pagination */
+.pagination{
+    margin-top: 20px;
+}
+.pagination li{
+    list-style: none;
+    margin-left: 0px;
+}
+.pagination:after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+}
+
+.previous {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    margin: 0px;
+    border-radius: 4px;
+    background: #CE2323;
+    line-height: 40px;
+    font-family: 'Open Sans', 'Heiti SC', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.pagination a:hover {
+    background: #fff;
+    color: #ce2323;
+}
+
+/*右侧目录*/
+#markdown-toc{
+    display: none;
+}
+.catalog-menu{
+    position: absolute;
+    top:0;
+    right:-260px;
+    width: 250px;
+    display: inline-block;
+    border-radius: 6px;
+    background: #ccc;
+    box-shadow: 0 2px 5px #666;
+    color: #333;
+}
+.catalog-menu h3{
+    color:#00688B;
+    text-align: center;
+    margin: 6px 0;
+}
+.catalog-menu-content{
+    padding: 10px;
+}
+.catalog-menu-content>li{
+    margin-top: 10px;
+    margin-left: 4px;
+    list-style-type :upper-roman;
+}
+.catalog-menu-content>li:first-child{
+    margin-top: 0;
+}
+.catalog-menu ul{
+    padding:0px;
+    margin:0px;
+}
+.catalog-menu ul li{
+    margin-top: 2px;
+    margin-left: 40px;
+    list-style-type :square;
+}
+.catalog-menu a{
+    color:#104954;
+}
+.catalog-menu a:visited{
+    color:#104954;
+}
+.catalog-menu ul li ul{
+    display: none;
+}
 /*blog post end*/
 
 /*blog end*/
@@ -244,14 +325,14 @@ h5{
 /* header start */
 .header{
     display: block;
-    padding: 4% 6%;
+    padding: 2% 6%;
 }
 .logo{
     float:left;
+    margin-top: 1%;
 }
 .cssmenu {
     float: right;
-    margin-top: 1%;
 }
 .cssmenu > ul > li {
     display:inline-block;
@@ -452,84 +533,6 @@ footer{
     background-position:-28px 0px;
 }
 
-/* 文章目录 */
-#markdown-toc{
-    display: none;
-}
-.catalog-menu{
-    margin-top: 40px;
-    min-width: 240px;
-    display: inline-block;
-    border-radius: 6px;
-    background: #ccc;
-    box-shadow: 0 2px 5px #666;
-    color: #333;
-}
-.catalog-menu .catalog-menu-content{
-    padding: 10px 0; 
-}
-.catalog-menu ul{
-    padding:0px;
-    margin:0px;
-}
-.catalog-menu ul li{
-    text-indent: 2em;
-}
-.catalog-menu a{
-    color:#104954;
-}
-.catalog-menu a:visited{
-    color:#104954;
-}
-.catalog-menu ul li ul{
-    display: none;
-}
-
-
-/* Pagination */
-.pagination{
-    margin-top: 20px;
-}
-.pagination li{
-    list-style: none;
-    margin-left: 0px;
-}
-.pagination:after {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    clear: both;
-}
-
-.previous {
-    float: left;
-}
-
-.next {
-    float: right;
-}
-
-.pagination a {
-    padding: 10px 20px;
-    margin: 0px;
-    border-radius: 4px;
-    background: #CE2323;
-    line-height: 40px;
-    font-family: 'Open Sans', 'Heiti SC', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-.pagination a:hover {
-    background: #fff;
-    color: #ce2323;
-}
-
 
 
 @media only screen and (max-width: 1280px) {
@@ -557,13 +560,13 @@ footer{
         line-height: 1.6em;
         padding: 14px 12px;
     }
-    .cate-content{
+    .content{
         width: 95%;
     }
-    .cate-posts{
+    .cate-posts,.post{
         width: 100%;
     }
-    .category{
+    .category,.catalog-menu{
         display: none;
     }
 }
@@ -584,11 +587,7 @@ footer{
     .top-nav{
         display:block;
     }
-    
-    .cate-content{
-        margin-top: 0px;
-    }
-    .cate-posts{
+    .cate-posts,.post{
          margin-top: 0px;
     }
     .content{

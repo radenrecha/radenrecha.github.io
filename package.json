@@ -1,8 +1,7 @@
 {
   "name": "limingyang2012.github.io",
   "version": "1.0.0",
-  "description": "Hey, friends ~ Here is my blog",
-  "main": "index.js",
+  "description": "LMY-HOME",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

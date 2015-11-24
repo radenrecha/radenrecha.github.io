@@ -25,12 +25,15 @@ $(document).ready(function(){
         $(".cate-posts > ul[data-cate = "+cateName+"]").show(400);
     }); 
 })();
-    //右边目录
-    /*if (typeof $('#markdown-toc').html() === 'undefined') {
+
+/*右侧目录*/
+(function(){
+   if (typeof $('#markdown-toc').html() === 'undefined') {
         $('.catalog-menu').hide();
     } else {
         $('.catalog-menu .catalog-menu-content').html($('#markdown-toc').html());
-    }*/
+    } 
+})();
 
 /*首页导航效果*/
 (function(){

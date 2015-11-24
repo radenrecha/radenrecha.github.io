@@ -46,8 +46,9 @@ JavaScript中的this学习笔记
 	};
 	console.log(object.getNameFunc()());
 
+###几种情况讨论
 
-###作为纯粹的函数调用
+####作为纯粹的函数调用
 
 函数可以直接被调用，此时 this 绑定到全局对象。在浏览器中，window 就是该全局对象
 
@@ -120,7 +121,7 @@ this关键字虽然是在person.sayName中声明的，但运行的时候是windo
 
 求解释啊！！！
 
-###作为构造函数，关键字new
+####作为构造函数，关键字new
 
 new关键字后的构造函数中的this指向用该构造函数构造出来的新对象。
 
@@ -139,7 +140,7 @@ new关键字后的构造函数中的this指向用该构造函数构造出来的�
 	mySelf.show();        //李明洋，23
 
 
-###使用call和apply设置this
+####使用call和apply设置this
 
 apply和call能够强制改变函数执行时的当前对象，让this指向其他对象。
 
@@ -161,7 +162,7 @@ apply和call能够强制改变函数执行时的当前对象，让this指向其�
 
 apply用于改变函数执行时的当前对象，当无参数时，当前对象为window，有参数时当前对象为该参数。
 
-###特殊情况
+####特殊情况
 
 --在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window
 
@@ -226,12 +227,12 @@ setTimeout、setInterval执行时的当前对象是全局对象window；
 
 ###参考资料：
 
-[深入浅出 JavaScript 中的 this ](http://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/)
+[1、深入浅出 JavaScript 中的 this ](http://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/)
 
-[Javascript的this用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)
+[2、Javascript的this用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)
 
-[Javascript中this关键字详解](http://www.cnblogs.com/justany/archive/2012/11/01/the_keyword_this_in_javascript.html)
+[3、Javascript中this关键字详解](http://www.cnblogs.com/justany/archive/2012/11/01/the_keyword_this_in_javascript.html)
 
-[详解 JavaScript 中的 this](http://www.csdn.net/article/2013-05-08/2815182-javascript-this)
+[4、详解JavaScript中的this](http://www.csdn.net/article/2013-05-08/2815182-javascript-this)
 
-[JavaScript中this的工作原理以及注意事项](http://blog.jobbole.com/67347/)
+[5、JavaScript中this的工作原理以及注意事项](http://blog.jobbole.com/67347/)
