@@ -18,7 +18,7 @@ body {
 }
 .container{
     margin: 20px auto;
-    min-height: 560px;
+    min-height: 580px;
     width:90%;
 }
 
@@ -337,6 +337,55 @@ body {
 /*blog end*/
 
 
+/*about*/
+.about {
+    margin:20px auto;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px #666;
+
+    /* white-space: pre-wrap;  */
+   word-wrap:break-word; 
+    word-break:break-all; 
+}
+.about-me,.about-site,.about-comment{
+    margin: 20px;
+}
+.about-me .about-title,.about-site .about-title,.about-comment .about-title{
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 2px solid #CE2323;
+}
+
+.about-me p,.about-site p,.about-comment p{
+    line-height: 2em;
+    margin: 1em 0;
+}
+
+.about-me p a,.about-site p a,.about-comment p a{
+    color:#8B2500;
+}
+.about-me ul{
+    padding-left: 30px;
+}
+.about-me ul li{
+    list-style: square;
+    padding:6px 0;
+    color: #555555;
+}
+.about-me ul li a{
+    color: #555555;
+}
+
+/*about end*/
+
+
 /* header start */
 .header{
     display: block;
@@ -352,6 +401,9 @@ body {
 .cssmenu > ul > li {
     display:inline-block;
     position: relative;
+}
+.cssmenu > ul>li:last-child{
+    color:#fff;
 }
 .cssmenu > ul > li > a {
     font-weight:bold;
@@ -507,20 +559,6 @@ footer{
 }
 
 
-/*comment*/
-.post-comment{
-    margin: 20px;
-}
-.post-comment span{
-    display: inline-block;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 600;
-    border-bottom: 5px solid #CE2323;
-}
-
 /* 回到顶部 */
  #returnTop {
     position: fixed;
@@ -621,6 +659,9 @@ footer{
     }
     .post code{
        max-width: 88%; 
+    }
+    .about {
+        width: 96%;
     }
     
 }
