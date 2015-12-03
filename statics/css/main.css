@@ -45,6 +45,10 @@ body {
     text-align: center;
     color: #000;
     padding-bottom: 10px;
+    -webkit-text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    -moz-text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    -ms-text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    -o-text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 .home .banner-text h3{
@@ -60,7 +64,11 @@ body {
    padding: 0;
    font-size: 30px;
    text-align: center;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+   -webkit-text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    -moz-text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    -ms-text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    -o-text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
 .home .social li {
    display: inline-block;
@@ -86,7 +94,7 @@ body {
     width: 80%;
     white-space: normal;
     display: inline-block;
-    background: #ccc;
+    background-color: rgba(255,255,255,0.6);
     border-radius: 6px;
     box-shadow: 0 2px 5px #666;
 }
@@ -99,7 +107,8 @@ body {
     list-style: none;
     margin: 0 2em 20px;
     display: block;
-    background: #458b74;
+    /* background: #458b74; */
+    background-color: rgba(7,139,69,0.6);
     padding:4px 40px;
     border-radius: 6px;
     -webkit-transition: all .3s linear;
@@ -125,7 +134,7 @@ body {
     width: 200px;
     display: inline-block;
     border-radius: 6px;
-    background: #ccc;
+    background-color: rgba(255,255,255,0.6);
     box-shadow: 0 2px 5px #666;
     color: #333;
 }
@@ -182,7 +191,7 @@ body {
     width: 78%;
     white-space: normal;
     display: inline-block;
-    background: #ccc;
+    background-color: rgba(255,255,255,0.6);
     border-radius: 6px;
     box-shadow: 0 2px 5px #666;
 }
@@ -285,7 +294,7 @@ body {
     width: 250px;
     display: inline-block;
     border-radius: 6px;
-    background: #ccc;
+    background-color: rgba(255,255,255,0.5);
     box-shadow: 0 2px 5px #666;
     color: #333;
 }
