@@ -54,26 +54,6 @@ $(document).ready(function(){
     });
 })();
 
-
-/*首页圆圈效果*/
-(function(){
-    var colors = [['#dfe8ed', '#30bae7'], ['#dfe8ed', '#d74680'], ['#dfe8ed', '#15c7a8'], ['#dfe8ed', '#eb7d4b']];                                                          
-    var percentage = [70,60,60,20];
-    for (var i = 1; i <= 5; i++) {
-        var child = document.getElementById('circles-' + i);                                       
-        Circles.create({
-            id:         child.id,
-            percentage: percentage[i - 1],
-            radius:     80,
-            width:      15,
-            number:     percentage[i - 1],
-            text:       '%',
-            colors:     colors[i - 1]
-        });
-    }
-})();
-
-
 });
 
 

@@ -1,6 +1,7 @@
 body {
     font-family:"Microsoft YaHei",arial, sans-serif;
     font-size: 100%;
+    height: 100%;
     background: #ffffff;
     color:#555555;
     background: -webkit-linear-gradient(90deg, #9bd 10%, #e85 90%); 
@@ -11,56 +12,63 @@ body {
 }
 .wrap{
     margin:0 auto;
+    height: 100%;
     width:80%;
 
 }
 .container{
     margin: 20px auto;
+    min-height: 560px;
     width:90%;
 }
 
 /* home start */
-.home{
-    margin: 200px auto;
-    min-height: 450px;
-}
+.home .banner{
+    width:420px;
+    height:400px;
+    margin: 160px auto;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4px;
 
-.home h3{
-    color:#3c4761;
-    text-align:center;
-    font-weight:600; 
-    padding-top: 1em;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    -ms-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    -o-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
-.circle-parent{
-    text-align: center;
+.home .banner-text {
+    padding: 10px;
+    padding-top: 60px;
 }
-.grid-1{
-    display: inline-block;
-}
-.circle{
-    display: inline-block;
-    padding-right: 60px;
-    padding-left: 60px;
-    margin-bottom: 20px;
-}
-.home h1{
-    padding-top: 40px;
-    font-size: 2.4em;
+.home .banner-text h1 {
     font-family:"Consolas",arial, sans-serif; 
+    text-align: center;
+    color: #000;
+    padding-bottom: 10px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+.home .banner-text h3{
+    font-size: 1.4em;
+    font-family:'Shadows Into Light',cursive,arial, sans-serif; 
     color:#da5a41!important;
     text-align:center;
     letter-spacing:5px;
     color:#3c4761;
 } 
-.home h4{
-    padding-top: 40px;
-    font-size: 1.6em;
-    font-family:'Shadows Into Light',cursive,arial, sans-serif; 
-    color:#9d6212!important;
-    text-align:center;
-    letter-spacing:5px;
-    color:#3c4761;
+.home .social {
+   margin: 30px 0;
+   padding: 0;
+   font-size: 30px;
+   text-align: center;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
+.home .social li {
+   display: inline-block;
+   margin: 0 26px;
+   padding: 0;
+}
+.home .social li a { color: #fff; }
+.home .social li a:hover { color: #11ABB0; }
 /* home end */
 
 /*blog start*/
@@ -199,8 +207,6 @@ body {
     color: #8B1A1A;
 }
 .post code{
-    display: block;
-    
     font-family: "consolas", 'Heiti SC', sans-serif;
     border-radius: 6px;
     padding: 1px 10px;
@@ -539,13 +545,13 @@ footer{
     .wrap{
         width:95%;
     }
-    .home{
-        margin:80px auto;
-    }
 }
 @media only screen and (max-width: 1024px) {
     .wrap{
         width:95%;
+    }
+    .container{
+        min-height: 460px;
     }
     .logo{
         width: 30%;
@@ -594,8 +600,31 @@ footer{
         width:90%;
         margin: 0px auto; 
     }
+    .home .banner{
+        width:320px;
+        margin: 40px auto;
+    }
+    .home .social li {
+       margin: 0 16px;
+    }
+    .footer{
+        display: none;
+    }
     .post code{
        max-width: 88%; 
     }
     
+}
+
+@media only screen and (max-width: 374px) {
+    .container{
+        min-height: 420px;
+    }
+    .home .banner{
+        width:260px;
+        margin: 30px auto;
+    }
+    .home .social li {
+       margin: 0 10px;
+    }   
 }

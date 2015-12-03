@@ -18,8 +18,10 @@ baseurl: ""
 
 
 # Site settings
-name:             limingyang2012
-author:
-  name:           "limingyang2012"
-  email:          "limingyang2012@zju.edu.cn"
-  uri:            "limingyang2012.github.io"
+name:           limingyang2012
+email:          limingyang2012@zju.edu.cn
+uri:            limingyang2012.github.io
+github:         limingyang2012
+twitter:        limingyang2012
+facebook:       limingyang2012
+linkedin:       limingyang2012
