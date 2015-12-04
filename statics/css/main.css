@@ -183,7 +183,7 @@ body {
 
 
 /*blog post start*/
-.post {
+.page {
     position:relative; 
     margin-top:20px;
     vertical-align: top;
@@ -199,45 +199,33 @@ body {
     padding: 2%;
 }
 
-.post .title{
+.post-content .title{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.post img{
+.post-content img{
     max-width:100%;
 }
-.post p{
+.post-content p{
     font-size: 18px;
     line-height: 26px;
     margin: 5px 0;
 }
-.post a{
+.post-content a{
     color: #8B1A1A;
 }
-.post code{
+.post-content code{
     font-family: "consolas", 'Heiti SC', sans-serif;
     border-radius: 6px;
     padding: 1px 10px;
     margin: 0 3px;    
 }
-.post .post-date{
+.post-content .post-date{
     text-align: right;
 }
 
-.post-comment{
-    width:90%;
-    margin: 0px auto;
-}
-.post-comment span{
-    display: inline-block;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 600;
-    border-bottom: 5px solid #CE2323;
-}
+
 
 /* Pagination */
 .pagination{
@@ -338,37 +326,24 @@ body {
 
 
 /*about*/
-.about {
-    margin:20px auto;
-    height: 100%;
-    width: 80%;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 6px;
-    box-shadow: 0 2px 5px #666;
-
-    /* white-space: pre-wrap;  */
-   word-wrap:break-word; 
-    word-break:break-all; 
-}
-.about-me,.about-site,.about-comment{
+.about-me,.about-site{
     margin: 20px;
 }
-.about-me .about-title,.about-site .about-title,.about-comment .about-title{
+.about-me .about-title,.about-site .about-title{
     display: inline-block;
     padding: 10px 0;
     margin-bottom: 20px;
     width: 100%;
     font-size: 24px;
     font-weight: 600;
-    border-bottom: 2px solid #CE2323;
 }
 
-.about-me p,.about-site p,.about-comment p{
+.about-me p,.about-site p{
     line-height: 2em;
     margin: 1em 0;
 }
 
-.about-me p a,.about-site p a,.about-comment p a{
+.about-me p a,.about-site p a{
     color:#8B2500;
 }
 .about-me ul{
@@ -385,6 +360,22 @@ body {
 
 /*about end*/
 
+
+/*comment*/
+.comment{
+    width:90%;
+    margin: 0px auto;
+}
+.comment span{
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 2px solid #CE2323;
+}
+/*comment end*/
 
 /* header start */
 .header{
@@ -580,6 +571,8 @@ footer{
     -o-transition:bottom 0.9s;
 
     cursor: pointer;
+
+    z-index: 1000;
 }
 
 #returnTop:hover {
@@ -657,7 +650,7 @@ footer{
     .footer{
         display: none;
     }
-    .post code{
+    .post-content code{
        max-width: 88%; 
     }
     .about {
