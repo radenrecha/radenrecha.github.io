@@ -22,8 +22,9 @@ JavaScript作用域和作用域链学习笔记
 
 ####1、全局作用域(Global Scope)
 
-* 最外层函数和在最外层函数外面定义的变量拥有全局作用域
+最外层函数和在最外层函数外面定义的变量拥有全局作用域
    
+    
     var name = "李明洋"; //最外层变量
     function Fun() { //最外层函数
         var anotherName = "李小洋";
@@ -37,7 +38,8 @@ JavaScript作用域和作用域链学习笔记
     console.log(anotherName); //anotherName is not defined
     sayName(); //sayName is not defined
 
-* 所有末定义直接赋值的变量自动声明为拥有全局作用域
+
+所有末定义直接赋值的变量自动声明为拥有全局作用域
 
     function Fun() {
         name = "李明洋";
@@ -47,13 +49,13 @@ JavaScript作用域和作用域链学习笔记
     console.log(name); //李明洋
     console.log(anotherName); //inVariable2 is not defined
 
-* 所有window对象的属性拥有全局作用域   
+所有window对象的属性拥有全局作用域   
     window对象的内置属性都拥有全局作用域，例如 `window.name`、`window.location`、`window.top` 等。
 
 
 ####2、局部作用域(Local Scope)
 
-* 和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所有在一些地方也会看到有人把这种作用域称为函数作用域
+和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所有在一些地方也会看到有人把这种作用域称为函数作用域
 。
 
 如 1. 中的变量 `inVariable` 和函数 `innerFun` 都只拥有局部作用域。
