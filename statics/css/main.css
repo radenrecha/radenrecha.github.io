@@ -4,11 +4,15 @@ body {
     height: 100%;
     background: #ffffff;
     color:#555555;
-    background: -webkit-linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background: -webkit-linear-gradient(left, #9bd 10%, #e85 90%); 
     background:    -moz-linear-gradient(90deg, #9bd 10%, #e85 90%); 
     background:     -ms-linear-gradient(90deg, #9bd 10%, #e85 90%); 
     background:      -o-linear-gradient(90deg, #9bd 10%, #e85 90%); 
-    background:         linear-gradient(90deg, #9bd 10%, #e85 90%); 
+    background:         linear-gradient(90deg, #9bd 10%, #e85 90%);
+
+  /*   background:-moz-linear-gradient(left,#ace,#f96);Mozilla
+  background:-webkit-linear-gradient(left,#ace,#f96);new gradient for Webkit
+  background:-o-linear-gradient(left,#ace,#f96); Opera11  */
 }
 .wrap{
     margin:0 auto;
