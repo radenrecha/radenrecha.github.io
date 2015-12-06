@@ -623,6 +623,7 @@ footer{
     }
     .container{
         min-height: 460px;
+        width: 100%;
     }
     .logo{
         width: 30%;
@@ -649,9 +650,11 @@ footer{
 }
 @media only screen and (max-width: 768px) {
     .wrap{
-        width:95%;
+        width:100%;
     }
-
+    .container{
+        width: 100%;
+    }
     .logo{
         text-align:center;
         float:none;
@@ -667,9 +670,25 @@ footer{
     .cate-posts,.page{
          margin-top: 0px;
     }
+    .cate-posts ul.posts li {
+        margin: 0 0.6em 10px;
+        padding:4px 4px;
+    }
+    .cate-posts ul.posts li h4{
+        font-size: 16px;
+    }
+    .cate-posts ul.posts li p,.cate-posts ul.posts li span{
+        font-size: 14px;
+    }
+    .page{
+        margin-bottom: 10px;
+    }
     .content{
         width:90%;
         margin: 0px auto; 
+    }
+    .post-content p{
+        font-size: 16px;
     }
     .home .banner{
         width:320px;
@@ -683,11 +702,13 @@ footer{
     }
     .post-content code{
        max-width: 88%; 
-    }
-    .about {
-        width: 96%;
-    }
-    
+    } 
+
+
+     #returnTop {
+        right: 10px;
+        bottom: -200px;
+    }  
 }
 
 @media only screen and (max-width: 374px) {
