@@ -90,24 +90,13 @@ body {
     margin: 60px auto; 
     min-height: 740px;
 }
-.cate-posts{
-    position: relative;
-    margin-top:20px;
-    vertical-align: top;
-    height: 100%;
-    width: 80%;
-    white-space: normal;
-    display: inline-block;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 6px;
-    box-shadow: 0 2px 5px #666;
-}
-.cate-posts .title{
+
+.post-title{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.cate-posts ul.posts li {
+.posts li {
     list-style: none;
     margin: 0 2em 20px;
     display: block;
@@ -119,7 +108,7 @@ body {
     -o-transition: all .3s linear;
     transition: all .3s linear;
 }
-.cate-posts ul.posts li:hover {
+.posts li:hover {
     padding-left: 30px;
     border-left: 15px solid #CE2323;
 
@@ -645,7 +634,7 @@ footer{
     .content{
         width: 95%;
     }
-    .cate-posts,.page{
+    .page{
         width: 100%;
     }
     .category,.catalog-menu,.link{
@@ -671,17 +660,17 @@ footer{
     .top-nav{
         display:block;
     }
-    .cate-posts,.page{
+    .page{
          margin-top: 0px;
     }
-    .cate-posts ul.posts li {
+    .posts li {
         margin: 0 0.6em 10px;
         padding:4px 4px;
     }
-    .cate-posts ul.posts li h4{
+    .posts li h4{
         font-size: 16px;
     }
-    .cate-posts ul.posts li p,.cate-posts ul.posts li span{
+    .posts li p,.posts li span{
         font-size: 14px;
     }
     .page{
