@@ -57,7 +57,52 @@ $(document).ready(function(){
     });
 })();
 
+/*瀑布流效果*/
+(function(){
+    $.getJSON("../../demo/data.json",function(data){
+        for(var i=0;i<data.length;i++){
+            //获取高度最小的child
+            var _index = getShort();
+            var oDiv = $('<div></div>');
+            var oImg = $('<img/>');
+            oImg.attr("src",data[i].src);
+            oDiv.append( oImg );
+            var oP = $("<p></p>");
+            oP.text(data[i].des);
+            var code = $("<a>[查看代码]</a>");
+            code.attr("href",data[i].code);
+            var link = $("<a>[查看演示]</a>");
+            link.attr("href",data[i].url);
+
+            oP.append( code ); 
+            oP.append( link );           
+            oDiv.append( oP );
+            $(".element").eq(_index).append( oDiv );
+        }
+    })
+    
+})();
+
+$(".demo").css("height",$(document).height() - 140 +"px");
+
 });
+
+
+/**
+ * 获取高度最小的child,瀑布流布局时使用
+ * @return {[type]} [description]
+ */
+function getShort(){
+    var index = 0;
+    var min = $(".element").eq(index).height();
+    $(".element").each(function(i){
+        if($(this).height() < min){
+            index = i;
+            min = $(this).height();
+        }
+    });
+    return index;
+}
 
 
 
