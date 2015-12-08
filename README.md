@@ -6,6 +6,26 @@
 * Site: [LMY-HOME](limingyang2012.github.io)
 * Twitter: [微博](weibo.com/limingyang2012/)
 
+###HOME-PAGE
+
+![home](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/home.jpg)
+
+###BLOG-PAGE
+
+![blog](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/blog.jpg)
+
+###POST-PAGE
+
+![post](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/post.jpg)
+
+###DENO-PAGE
+
+![demo](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/demo.jpg)
+
+###ABOUT-PAGE
+
+![about](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/about.jpg)
+
 ## License
 
 [MIT License](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/LICENSE)
