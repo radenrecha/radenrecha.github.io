@@ -1,16 +1,11 @@
 [
 {
-	"src": "../../assets/demo/blog.png",
-	"des": "本博客，通过jekyll创建博客，实现博客基本功能。",
-	"url": "http://limingyang2012.github.io/2048/js%E7%89%88%E6%9C%AC/index.html",
-	"code": "https://github.com/limingyang2012/2048"
-},
-{
 	"src": "../../assets/demo/2048.png",
 	"des": "2048小游戏，通过JavaScript和jQuery两种方法来写的。",
 	"url": "http://limingyang2012.github.io/2048/js%E7%89%88%E6%9C%AC/index.html",
 	"code": "https://github.com/limingyang2012/2048"
 },
+
 {
 	"src": "../../assets/demo/lunbotu.png",
 	"des": "一个简单的轮播图，一定时间会自动播放，同时点击左右按钮也会切换。",
@@ -22,6 +17,12 @@
 	"des": "百度ife练习题第四题，做一个任务管理web-app，实现了基本功能。",
 	"url": "http://limingyang2012.github.io/baidu_ife_task/spring_task0004/",
 	"code": "https://github.com/limingyang2012/baidu_ife_task"
+},
+{
+	"src": "../../assets/demo/blog.png",
+	"des": "本博客，通过jekyll创建博客，实现博客基本功能。",
+	"url": "http://limingyang2012.github.io/2048/js%E7%89%88%E6%9C%AC/index.html",
+	"code": "https://github.com/limingyang2012/2048"
 },
 {
 	"src": "../../assets/demo/waterfall.png",
