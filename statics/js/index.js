@@ -63,27 +63,36 @@ $(document).ready(function(){
         for(var i=0;i<data.length;i++){
             //获取高度最小的child
             var _index = getShort();
-            var oDiv = $('<div></div>');
-            var oImg = $('<img/>');
-            oImg.attr("src",data[i].src);
-            oDiv.append( oImg );
-            var oP = $("<p></p>");
-            oP.text(data[i].des);
+            var child = $('<div></div>');
+            var image = $('<img/>');
+            image.attr("src",data[i].src);
+            image.css({"width":"214px","height":data[i].height * ( 214 / data[i].width ) + 'px'})
+            child.append( image );
+            var description = $("<p></p>");
+            description.text(data[i].des);
             var code = $("<a>[查看代码]</a>");
             code.attr("href",data[i].code);
             var link = $("<a>[查看演示]</a>");
             link.attr("href",data[i].url);
 
-            oP.append( code ); 
-            oP.append( link );           
-            oDiv.append( oP );
-            $(".element").eq(_index).append( oDiv );
+            description.append( code ); 
+            description.append( link );           
+            child.append( description );
+            $(".element").eq(_index).append( child );
         }
-    })
     
-})();
+        var elementHArr=[];
+        console.log( $(".element").eq( 0 ).height())  
+        $(".element").each( function( index, value ){
+            elementHArr[ index ] = $(".element").eq( index ).height(); 
+            console.log( $(".element").eq( index ).height())      
+        });
 
-$(".demo").css("height",$(document).height() - 140 +"px");
+        var maxH = Math.max.apply( null, elementHArr );
+        console.log(maxH)
+        $(".demo").css("height",maxH +"px");
+    }) 
+})();
 
 });
 
