@@ -4,7 +4,6 @@
 这是我的个人博客，大部分内容都是自己写的，姑且称为博客也是我自己的吧。基于 jekyll。如果你想使用这个博客模板。最好能帮我**star**一下，同时也麻烦您标注一下来源，感谢。
 
 * Site: [LMY-HOME](limingyang2012.github.io)
-* Twitter: [微博](weibo.com/limingyang2012/)
 
 ###HOME-PAGE
 
