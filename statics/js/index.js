@@ -66,7 +66,9 @@ $(document).ready(function(){
             var child = $('<div></div>');
             var image = $('<img/>');
             image.attr("src",data[i].src);
-            image.css({"width":"214px","height":data[i].height * ( 214 / data[i].width ) + 'px'})
+            if(window.innerWidth >= 768){
+                image.css({"width":"214px","height":data[i].height * ( 214 / data[i].width ) + 'px'})
+            }
             child.append( image );
             var description = $("<p></p>");
             description.text(data[i].des);

@@ -195,7 +195,7 @@ body { font-family: "Microsoft YaHei",arial, sans-serif; font-size: 100%; height
 @media only screen and (max-width: 1024px) { .link { display: none; } }
 
 /*demo*/
-.demo { width: 1024px; margin: 60px auto 0; padding: 20px; }
+.demo { width: 1024px; margin: 60px auto 0; padding: 20px 0; }
 @media only screen and (max-width: 768px) { .demo { width: 90%; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -o-transform: translateX(-50%); -moz-transform: translateX(-50%); } }
 .demo .element { width: 236px; float: left; margin-right: 10px; }
 @media only screen and (max-width: 768px) { .demo .element { width: 100%; } }
