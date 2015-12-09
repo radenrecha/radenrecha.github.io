@@ -25,13 +25,29 @@
     }
     code{
         font-family: "consolas", 'Heiti SC', sans-serif;
+        font-size: 16px;
         border-radius: 6px;
         padding: 1px 10px;
-        margin: 0 3px; 
+        margin: 0 3px;
+        //color:#8B2500; 
         overflow:hidden;
         @media only screen and (max-width: 768px) {
-            max-width: 88%;  
+            max-width: 88%; 
         }   
+    }
+    
+    ul{
+        margin:1em;
+
+        li {
+            margin-left: 2em;
+            margin-bottom: 6px;
+            list-style-type: disc;
+        }
+    }
+
+    .javascript{
+        opacity:1;
     }
 
     
@@ -41,8 +57,8 @@
 .pagination{
     margin-top: 20px;
     li{
-        list-style: none;
-        margin-left: 0px;
+        list-style: none!important;
+        margin-left: -1em!important;
     }
     a {
         padding: 10px 20px;
