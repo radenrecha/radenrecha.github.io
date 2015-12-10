@@ -1,5 +1,5 @@
 /*瀑布流效果*/
-var waterfull = function(){
+var waterfall = function(){
     $.getJSON("../../demo/data.json",function(data){
         for(var i=0;i<data.length;i++){
             //获取高度最小的child
@@ -52,4 +52,4 @@ function getShort(){
     return index;
 };
 
-waterfull();
+waterfall();
