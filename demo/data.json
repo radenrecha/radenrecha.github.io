@@ -1,6 +1,6 @@
 [
 {
-	"src": "../../assets/demo/2048.png",
+	"src": "../../assets/demo/2048.jpg",
 	"height": 522,
 	"width": 520,
 	"des": "2048小游戏，通过JavaScript和jQuery两种方法来写的。",
@@ -9,7 +9,7 @@
 },
 
 {
-	"src": "../../assets/demo/lunbotu.png",
+	"src": "../../assets/demo/lunbotu.jpg",
 	"height": 47,
 	"width": 220,
 	"des": "一个简单的轮播图，一定时间会自动播放，同时点击左右按钮也会切换。",
@@ -17,7 +17,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task/tree/master/spring_task0002"
 },
 {
-	"src": "../../assets/demo/todo.png",
+	"src": "../../assets/demo/todo.jpg",
 	"height": 125,
 	"width": 220,
 	"des": "百度ife练习题第四题，做一个任务管理web-app，实现了基本功能。",
@@ -25,7 +25,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task"
 },
 {
-	"src": "../../assets/demo/blog.png",
+	"src": "../../assets/demo/blog.jpg",
 	"height": 401,
 	"width": 220,
 	"des": "本博客，通过jekyll创建博客，实现博客基本功能。",
@@ -33,7 +33,7 @@
 	"code": "https://github.com/limingyang2012/2048"
 },
 {
-	"src": "../../assets/demo/waterfall.png",
+	"src": "../../assets/demo/waterfall.jpg",
 	"height": 182,
 	"width": 220,
 	"des": "实现了一个简单的瀑布流布局，使用javascript和jQuery分别实现。",
@@ -41,7 +41,7 @@
 	"code": "https://github.com/limingyang2012/waterfall"
 },
 {
-	"src": "../../assets/demo/daojishi.png",
+	"src": "../../assets/demo/daojishi.jpg",
 	"height": 104,
 	"width": 220,
 	"des": "一个简单的倒计时功能，输入特定时间计算出距离当前时刻的小时数。",
@@ -49,7 +49,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task/tree/master/spring_task0002"
 },
 {
-	"src": "../../assets/demo/drag.png",
+	"src": "../../assets/demo/drag.jpg",
 	"height": 138,
 	"width": 220,
 	"des": "拖拽交互应用,通过鼠标可以实现两个父容器中的元素的移动，并且两个容器之间可以交换。",
@@ -57,7 +57,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task/tree/master/spring_task0002"
 },
 {
-	"src": "../../assets/demo/hobby.png",
+	"src": "../../assets/demo/hobby.jpg",
 	"height": 164,
 	"width": 220,
 	"des": "判断兴趣爱好，输入框中用来输入用户的兴趣爱好。",
@@ -65,7 +65,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task/tree/master/spring_task0002"
 },
 {
-	"src": "../../assets/demo/inputtip.png",
+	"src": "../../assets/demo/inputtip.jpg",
 	"height": 200,
 	"width": 220,
 	"des": "输入提示框，实现一个类似百度搜索框的输入提示的功能。",
@@ -73,7 +73,7 @@
 	"code": "https://github.com/limingyang2012/baidu_ife_task/tree/master/spring_task0002"
 },
 {
-	"src": "../../assets/demo/qiqiaoban.png",
+	"src": "../../assets/demo/qiqiaoban.jpg",
 	"height": 219,
 	"width": 220,
 	"des": "通过canvas实现一个简单的七巧板。",
