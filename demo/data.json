@@ -79,5 +79,13 @@
 	"des": "通过canvas实现一个简单的七巧板。",
 	"url": "http://limingyang2012.github.io/learn-canvas/tangram/",
 	"code": "https://github.com/limingyang2012/learn-canvas/blob/master/tangram/index.html"
+},
+{
+	"src": "../../assets/demo/tetris.jpg",
+	"height": 405,
+	"width": 265,
+	"des": "通过canvas实现一个简单俄罗斯方块小游戏,使用了canvas，requre.js，sass等技术",
+	"url": "http://limingyang2012.github.io/terris/",
+	"code": "https://github.com/limingyang2012/tetris/"
 }
 ]
