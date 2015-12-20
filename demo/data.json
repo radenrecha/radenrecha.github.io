@@ -85,7 +85,7 @@
 	"height": 405,
 	"width": 265,
 	"des": "通过canvas实现一个简单俄罗斯方块小游戏,使用了canvas，requre.js，sass等技术",
-	"url": "http://limingyang2012.github.io/terris/",
+	"url": "http://limingyang2012.github.io/tetris/",
 	"code": "https://github.com/limingyang2012/tetris/"
 }
 ]
