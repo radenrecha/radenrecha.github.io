@@ -30,6 +30,7 @@
             padding: 10px; 
             margin-bottom: 10px;
             cursor: pointer;
+            
 
             img { 
                 width: 214px; 
@@ -52,6 +53,10 @@
             }
 
             &:hover{
+                transform:scale(1.04);
+                -webkit-transform:scale(1.04);
+                -o-transform:scale(1.04);
+                -moz-transform:scale(1.04);
                 box-shadow: 0px 2px 5px #000;
             }
         }
