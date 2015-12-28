@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "gulp简单使用"
-date:  2015-12-24
-categories: HTMLCSS
+date:  2015-12-27
+categories: Node
 ---
 
 gulp简单使用方法
@@ -55,22 +55,71 @@ gulp简单使用方法
 
 	npm init
 
-npm init命令会为你创建一个package.json文件，这个文件保存着这个项目相关信息。
+npm init命令会为你创建一个package.json文件，这个文件保存着这个项目相关信息。简单说来呢，这个 package.json 文件就是定义了项目的各种元信息，包括项目的名称，git repo 的地址，作者等等。最重要的是，其中定义了我们项目的依赖，这样这个项目在部署时，我们就不必将 node_modules 目录也上传到服务器，服务器在拿到我们的项目时，只需要执行 npm install，则 npm 会自动读取 package.json 中的依赖并安装在项目的 node_modules 下面，然后程序就可以在服务器上跑起来了。现在随便填写就好了。
 
-	.
-	├── app
-	│   ├── css/
-	│   ├── scss/
-	│   ├── js/
-	│   ├── index.html
-	├── gulp
-	│   └── tasks
-	├── gulpfile.js
-	├── node_modules
-	│   └── 
-	└── package.json
-
-
-未完。。。。。
+	{
+	  "name": "project",
+	  "version": "1.0.0",
+	  "description": "",
+	  "main": "app.js",
+	  "scripts": {
+	    "test": "echo \"Error: no test specified\" && exit 1"
+	  },
+	  "author": "",
+	  "license": "ISC"
+	}
 
 
+现在我们创建一个Gulp任务来编译[sass](https://github.com/sindresorhus/gulp-ruby-sass)。首先创建一个名为gulpfile.js的文件，这是定义Gulp任务的地方，它可以通过gulp命令来运行，接着把下面的代码放到gulpfile.js文件里面。
+
+	var gulp = require('gulp');
+	var sass = require('gulp-ruby-sass');
+
+	gulp.task('sass', function () {
+	  return sass('app/css/index.scss')
+	    .on('error', sass.logError)
+	    .pipe(gulp.dest('app/css/'));
+	});
+
+接下来还需要安装上面使用的依赖gulp和sass。运行下面命令：
+
+	npm install gulp gulp-ruby-sass --save-dev
+
+当然如果自己临时使用时可以省去--save-dev的
+
+> 注意gulp-ruby-sass和gulp-sass的区别，前者需要需要ruby环境，需要生成临时目录和临时文件。因为之前使用的是gulp-sass这里使用gulp-ruby-sass玩玩。没有本质的区别。注意下就好了，当然了代码是有点区别的。[gulp-sass](https://github.com/dlmanning/gulp-sass)代码参考下这里的readme。其实都很简单的。
+	
+我们可以看见project目录中生成了文件node_modules。而且project.json中引入了依赖
+
+	"devDependencies": {
+	    "gulp": "^3.9.0",
+	    "gulp-ruby-sass": "^2.0.6"
+	  }
+
+测试一下命令行输入
+	
+	gulp sass
+
+你会发现css文件夹下面生成了index.css文件，运行index.html可以查效果。
+
+其实说到这里gulp也基本讲完了，因为其他操作都大同小异，查看帮助文档就能解决了。主要是入门问题，下面给出常用的帮助文档。
+
+
+* 编译Sass [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass)与[gulp-sass](https://github.com/dlmanning/gulp-sass)
+* Autoprefixer [gulp-autoprefixer](https://github.com/Metrime/gulp-autoprefixer)
+* 缩小化(minify)CSS [gulp-minify-css](https://github.com/murphydanger/gulp-minify-css)
+* JSHint [gulp-jshint](https://github.com/spalger/gulp-jshint)
+* 拼接 [gulp-concat](https://github.com/contra/gulp-concat)
+* 丑化(Uglify) [gulp-uglify](https://github.com/terinjokes/gulp-uglify)
+* 图片压缩 [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
+* 即时重整(LiveReload) [gulp-livereload](https://github.com/vohof/gulp-livereload)
+* 清理档案 [gulp-clean](https://github.com/peter-vilja/gulp-clean)
+* 图片快取，只有更改过得图片会进行压缩 (gulp-cache](https://github.com/jgable/gulp-cache/)
+* 更动通知 [gulp-notify](https://github.com/mikaelbr/gulp-notify)
+
+
+###参考资料
+1、[gulp中文网](http://www.gulpjs.com.cn/)
+2、[gulp入门指南](http://www.open-open.com/lib/view/open1417068223049.html)
+3、[Gulp新手入门教程](http://www.w3ctrain.com/2015/12/22/gulp-for-beginners/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+4、[Gulp开发教程](http://www.imooc.com/article/2364)
