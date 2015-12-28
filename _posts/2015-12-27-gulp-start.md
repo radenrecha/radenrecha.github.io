@@ -25,6 +25,7 @@ gulp简单使用方法
 
 [Node.js](http://nodejs.cn/)就是运行在服务端的 JavaScript。Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。Gulp和所有插件都通过JavaScript编写并依托Node.js平台。作为前端工程师你最好了解简单的Node.js。
 
+
 下面提供一些Node.js的入门教程，当然你暂时不用去看，等你有足够的时间和精力的时候建议你去学习下：
 
 [Node初学者入门，一本全面的NodeJS教程](https://cnodejs.org/getstart)
@@ -39,6 +40,7 @@ gulp简单使用方法
 
 下面回到我们的重点gulp
 
+
 ###全局安装Gulp
 
 首先我们需要安装Node.js的环境这个就不介绍了。推荐[教程](http://www.runoob.com/nodejs/nodejs-install-setup.html)自己安装配置好。
@@ -48,6 +50,7 @@ gulp简单使用方法
 	npm install -g gulp
 
 就这么简单，安装好在继续后面的。
+
 
 ###使用Gulp
 
@@ -87,7 +90,9 @@ npm init命令会为你创建一个package.json文件，这个文件保存着这
 
 当然如果自己临时使用时可以省去--save-dev的
 
+
 > 注意gulp-ruby-sass和gulp-sass的区别，前者需要需要ruby环境，需要生成临时目录和临时文件。因为之前使用的是gulp-sass这里使用gulp-ruby-sass玩玩。没有本质的区别。注意下就好了，当然了代码是有点区别的。[gulp-sass](https://github.com/dlmanning/gulp-sass)代码参考下这里的readme。其实都很简单的。
+
 	
 我们可以看见project目录中生成了文件node_modules。而且project.json中引入了依赖
 
@@ -102,6 +107,7 @@ npm init命令会为你创建一个package.json文件，这个文件保存着这
 
 你会发现css文件夹下面生成了index.css文件，运行index.html可以查效果。
 
+
 其实说到这里gulp也基本讲完了，因为其他操作都大同小异，查看帮助文档就能解决了。主要是入门问题，下面给出常用的帮助文档。
 
 
@@ -114,12 +120,15 @@ npm init命令会为你创建一个package.json文件，这个文件保存着这
 * 图片压缩 [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 * 即时重整(LiveReload) [gulp-livereload](https://github.com/vohof/gulp-livereload)
 * 清理档案 [gulp-clean](https://github.com/peter-vilja/gulp-clean)
-* 图片快取，只有更改过得图片会进行压缩 (gulp-cache](https://github.com/jgable/gulp-cache/)
+* 图片快取，只有更改过得图片会进行压缩 [gulp-cache](https://github.com/jgable/gulp-cache/)
 * 更动通知 [gulp-notify](https://github.com/mikaelbr/gulp-notify)
 
 
 ###参考资料
 1、[gulp中文网](http://www.gulpjs.com.cn/)
+
 2、[gulp入门指南](http://www.open-open.com/lib/view/open1417068223049.html)
+
 3、[Gulp新手入门教程](http://www.w3ctrain.com/2015/12/22/gulp-for-beginners/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+
 4、[Gulp开发教程](http://www.imooc.com/article/2364)
