@@ -14,7 +14,7 @@
     }
     p{
         font-size: 18px;
-        line-height: 30px;
+        line-height: 32px;
         margin: 10px 0;
         @media only screen and (max-width: 768px) {
             font-size: 16px;
@@ -27,13 +27,16 @@
         font-family:"consolas", 'Heiti SC', sans-serif;
         font-size:18px;
         color:#473C8B;
+        padding-left:6px;
+        border-left:6px solid #999;
     }
     code{
         font-family: "consolas", 'Heiti SC', sans-serif;
         font-size: 18px;
         background-color:#111;
         border-radius: 2px;
-        padding: 1px 10px;
+        line-height: 26px;
+        padding: 6px 10px;
         margin: 0 3px;
         color:#8e8222; 
         overflow:hidden;
@@ -48,6 +51,7 @@
         li {
             margin-left: 2em;
             margin-bottom: 6px;
+            padding:4px 0px;
             list-style-type: disc;
         }
     }
