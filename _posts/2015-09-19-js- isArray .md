@@ -42,7 +42,7 @@ Object
 对于Function，String，Number，Undefined等几种类型的对象来说，他完全可以胜任，但是为Array时,我们并不能得到一个array的返回值
 
     function a1(){
-        return true;
+      return true;
     }
     console.log(typeof(a1)); //function
 
@@ -83,9 +83,9 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
     console.log(c1.constructor == Array);//true
                 
     function employee(name,job,born){
-        this.name=name;
-        this.job=job;
-        this.born=born;
+      this.name=name;
+      this.job=job;
+      this.born=born;
     }
     var bill = new employee("Bill Gates","Engineer",1985);
     console.log(bill.constructor);//function employee(name,job,born)
@@ -101,8 +101,8 @@ instance，故名思义，实例，例子，所以instanceof用于判断一个�
 ####4、较为严谨并且通用的方法：
 
     function isArray(object){
-        return object && typeof object==='object' &&
-            Array == object.constructor;
+      return object && typeof object==='object' &&
+        Array == object.constructor;
     }
 
 注意
@@ -128,19 +128,19 @@ b、每个页面的Array原生对象所引用的地址是不一样的，在子�
 
     function isArray(object){
     return  object && typeof object==='object' &&    
-        typeof object.length==='number' &&  
-        typeof object.splice==='function' &&    
-            //判断length属性是否是可枚举的 对于数组 将得到false  
-        !(object.propertyIsEnumerable('length'));
+      typeof object.length==='number' &&  
+      typeof object.splice==='function' &&    
+        //判断length属性是否是可枚举的 对于数组 将得到false  
+      !(object.propertyIsEnumerable('length'));
     }
 
 有length和splice并不一定是数组，因为可以为对象添加属性，而不能枚举length属性，才是最重要的判断因子。
 
 ####6、最简单的方法
        
-        var isArray = function(obj) { 
-            return Object.prototype.toString.call(obj) === '[object Array]'; 
-        }
+    var isArray = function(obj) { 
+      return Object.prototype.toString.call(obj) === '[object Array]'; 
+    }
 
 call改变toString的this引用为待检测的对象，返回此对象的字符串表示，然后对比此字符串是否是'[object Array]'，以判断其是否是Array的实例。也许你要问了，为什么不直接o.toString()？嗯，虽然Array继承自Object，也会有toString方法，但是这个方法有可能会被改写而达不到我们的要求，而Object.prototype则是老虎的屁股，很少有人敢去碰它的，所以能一定程度保证其“纯洁性”。 
 
@@ -149,13 +149,12 @@ call改变toString的this引用为待检测的对象，返回此对象的字符�
 ####7、和在一起就是
 
     if (value instanceof Array ||
-        (!(value instanceof Object) &&
-            (Object.prototype.toString.call((value)) == '[object Array]') ||
-            typeof value.length == 'number' &&
-            typeof value.splice != 'undefined' &&
-            typeof value.propertyIsEnumerable != 'undefined' &&
-            !value.propertyIsEnumerable('splice'))) {
-        return 'array';
+      (!(value instanceof Object) &&
+        (Object.prototype.toString.call((value)) == '[object Array]') ||
+        typeof value.length == 'number' &&
+        typeof value.splice != 'undefined' &&
+        typeof value.propertyIsEnumerable != 'undefined' && !value.propertyIsEnumerable('splice'))) {
+      return 'array';
     }
 
 ###参考链接：

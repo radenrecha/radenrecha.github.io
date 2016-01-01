@@ -27,11 +27,11 @@ JavaScript作用域和作用域链学习笔记
     
     var name = "李明洋"; //最外层变量
     function Fun() { //最外层函数
-        var anotherName = "李小洋";
-        function sayName() { //内层函数
-            console.log(anotherName);
-        }
-        sayName();
+      var anotherName = "李小洋";
+      function sayName() { //内层函数
+        onsole.log(anotherName);
+      }
+      sayName();
     }
     console.log(name); //李明洋
     Fun(); //李小洋
@@ -42,8 +42,8 @@ JavaScript作用域和作用域链学习笔记
 所有末定义直接赋值的变量自动声明为拥有全局作用域
 
     function Fun() {
-        name = "李明洋";
-        var anotherName = "李小洋";
+      name = "李明洋";
+      var anotherName = "李小洋";
     }
     Fun();
     console.log(name); //李明洋
@@ -68,16 +68,16 @@ JavaScript作用域和作用域链学习笔记
 
 	name="李明洋";  
 	function t(){  
-		var name="李小洋";  
-		function s(){  
-		    var name="小李洋";  
-		    console.log(name);  
-		}  
-		function ss(){  
-		    console.log(name);  
-		}  
-		s();  
-		ss();  
+	  var name="李小洋";  
+	  function s(){  
+		var name="小李洋";  
+		console.log(name);  
+	  }  
+	  function ss(){  
+		console.log(name);  
+	  }  
+	  s();  
+	  ss();  
 	}  
 	t(); 
 
@@ -91,19 +91,19 @@ name是"小李洋"。
 
 	<head>  
 	<script type="text/javascript">  
-		function buttonInit(){  
-			for(var i=1;i<4;i++){  
-				   var b=document.getElementById("button"+i);  
-				   b.addEventListener("click",function(){ alert("Button"+i);},false);  
-			}  
+	  function buttonInit(){  
+		for(var i=1;i<4;i++){  
+		  var b=document.getElementById("button"+i);  
+		  b.addEventListener("click",function(){ alert("Button"+i);},false);  
 		}  
-		window.onload=buttonInit;  
+	  }  
+	  window.onload=buttonInit;  
 	</script>  
 	</head>  
 	<body>  
-		<button id="button1">Button1</button>  
-		<button id="button2">Button2</button>  
-		<button id="button3">Button3</button>  
+	  <button id="button1">Button1</button>  
+	  <button id="button2">Button2</button>  
+	  <button id="button3">Button3</button>  
 	</body>  
 
 当文档加载完毕，给几个按钮注册点击事件，当我们点击按钮时，会弹出什么提示框呢？
@@ -144,8 +144,8 @@ name是"小李洋"。
 
 	var a = 1;
 	function fn1(){
-		console.log(a);						
-		var a = 2;
+	  console.log(a);						
+	  var a = 2;
 	}
 	fn1();
 	console.log(a);							
@@ -154,8 +154,8 @@ name是"小李洋"。
 
 	var a = 1;
 	function fn1(){
-		console.log(a);						
-		a = 2;
+	  console.log(a);						
+	  a = 2;
 	}
 	fn1();
 	console.log(a);							
@@ -164,8 +164,8 @@ name是"小李洋"。
 
 	var a = 1;
 	function fn1(a){
-		console.log(a);						
-		a = 2;
+	  console.log(a);						
+	  a = 2;
 	}
 	fn1();
 	console.log(a);							
@@ -174,8 +174,8 @@ name是"小李洋"。
 
 	var a = 1;
 	function fn1(a){
-		console.log(a);						
-		a = 2;
+	  console.log(a);						
+	  a = 2;
 	}
 	fn1(a);
 	console.log(a);							

@@ -22,7 +22,7 @@ onchange、oninput对于文本框的作用学习笔记
 
     JS
     $('input').onchange = function() {
-        console.log(this.value);
+      console.log(this.value);
     }
 
 上述代码，当鼠标在文本框中输入内容，且光标离开后，会输出修改后的内容；
@@ -32,9 +32,9 @@ onchange、oninput对于文本框的作用学习笔记
 为了进行实时判断我用了onfocus和onkeyup两个事件进行了嵌套进行判断，这是在我还不知道有oninput事件存在的时候使用过的。
 
 	$('input').onfocus = function(){
-		document.onkeyup = function(){
-			//需要处理的内容
-		}	
+	  document.onkeyup = function(){
+		//需要处理的内容
+	  }	
 	}
 
 ####2、onpropertychange
@@ -46,9 +46,9 @@ onpropertychange属性可在某些情况下解决上面存在的问题，不用�
     JS
     // Internet Explorer
     function OnPropChanged (event) {
-        if (event.propertyName.toLowerCase () == "value") {
-            alert ("The new content: " + event.srcElement.value);
-        }
+      if (event.propertyName.toLowerCase () == "value") {
+          alert ("The new content: " + event.srcElement.value);
+      }
     } 
     $('input').attachEvent("onpropertychange", OnPropChanged);
 
@@ -61,7 +61,7 @@ oninput 是onpropertychange的非IE浏览器版本，支持firefox和opera等浏
     JS
     // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
     function OnInput (event) {
-        alert ("The new content: " + event.target.value);
+      alert ("The new content: " + event.target.value);
     }
     $('input').addEventListener("input", OnInput);
 
@@ -74,25 +74,25 @@ oninput 是onpropertychange的非IE浏览器版本，支持firefox和opera等浏
     JS
     // Internet Explorer
     function OnPropChanged (event) {
-        if (event.propertyName.toLowerCase () == "value") {
-            alert ("The new content: " + event.srcElement.value);
-        }
+      if (event.propertyName.toLowerCase () == "value") {
+        alert ("The new content: " + event.srcElement.value);
+      }
     } 
 
     // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
     function OnInput (event) {
-        alert ("The new content: " + event.target.value);
+      alert ("The new content: " + event.target.value);
     }
 
     function addInputEventListener() {
-        // all browsers except IE before version 9
-        if ($('input').addEventListener) { 
-            $('input').addEventListener("input", OnInput);
-        }
-        // Internet Explorer and Opera
-        if ($('input').attachEvent) { 
-            $('input').attachEvent("onpropertychange", OnPropChanged); 
-        }
+      // all browsers except IE before version 9
+      if ($('input').addEventListener) { 
+        $('input').addEventListener("input", OnInput);
+      }
+      // Internet Explorer and Opera
+      if ($('input').attachEvent) { 
+        $('input').attachEvent("onpropertychange", OnPropChanged); 
+      }
     }
 
 ###三种事件区别

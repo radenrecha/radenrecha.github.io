@@ -31,10 +31,10 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
+      <div class="left">
+      </div>
+      <div class="right">
+      </div>
     </div>
 
 ###清浮动方法
@@ -51,10 +51,10 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
+      <div class="left">
+      </div>
+      <div class="right">
+      </div>
     </div>
 
 
@@ -70,10 +70,10 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
+      <div class="left">
+      </div>
+      <div class="right">
+      </div>
     </div>
 
 ####方法3:父级添加display: inline-block
@@ -88,10 +88,10 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
+      <div class="left">
+      </div>
+      <div class="right">
+      </div>
     </div>
 
 ####方法4:空标签清浮动
@@ -106,8 +106,8 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="div"></div>
-        <div class="clear"></div>
+      <div class="div"></div>
+      <div class="clear"></div>
     </div>
 
 
@@ -122,8 +122,8 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="div"></div>
-        <br clear="all"/>
+      <div class="div"></div>
+      <br clear="all"/>
     </div>
 
 ####方法6:加上clear类
@@ -139,8 +139,8 @@ categories: HTMLCSS
         
     html
     <div class="box clear">
-        <div class="div">  
-        </div>
+      <div class="div">  
+      </div>
     </div>
 
 
@@ -160,7 +160,7 @@ categories: HTMLCSS
 
     html
     <div class="box">
-        <div class="div1"></div>
+      <div class="div1"></div>
     </div>
 
 ####方法8:position
@@ -174,7 +174,7 @@ categories: HTMLCSS
         
     html
     <div class="box">
-        <div class="div1"></div>
+      <div class="div1"></div>
     </div>
 
 

@@ -23,11 +23,11 @@ JavaScript闭包学习笔记
 例子1
 
 	function outFn(a){
-		var b = 5;
-		function inFn(){
-			console.log(a);
-			console.log(b);
-		}
+	  var b = 5;
+	  function inFn(){
+		console.log(a);
+		console.log(b);
+	  }
 	}
 	outFn();
 
@@ -38,7 +38,7 @@ JavaScript闭包学习笔记
 例子2
 
 	function fn(){
-		var a = 1;	
+	  var a = 1;	
 	}
 	fn();
 
@@ -49,10 +49,10 @@ JavaScript闭包学习笔记
 例子3
 
 	function outFn(){
-		var a = 5;
-		function inFn(){
-			console.log(a);
-		}
+	  var a = 5;
+	  function inFn(){
+		console.log(a);
+	  }
 		return inFn;
 	}
 	var anotherFn = outFn();
@@ -78,8 +78,8 @@ JavaScript闭包学习笔记
 
 	var a = 1; //全局变量
 	function fn(){
-		a++;
-		console.log(a);
+	  a++;
+	  console.log(a);
 	}
 	fn();  //2
 	fn();  //3
@@ -88,9 +88,9 @@ JavaScript闭包学习笔记
 例子5
 
 	function fn(){
-		var a = 1; //局部变量，
-		a++;
-		console.log(a);
+	  var a = 1; //局部变量，
+	  a++;
+	  console.log(a);
 	}
 	fn();  //2
 	fn();  //2  由于垃圾回收机制，每次调用完就回收了，下次再执行时就重新生成了，所以每次都是2
@@ -100,11 +100,11 @@ JavaScript闭包学习笔记
 例子6
 
 	function fn(){
-		var a = 1;  // 局部变量实现的累加
-		return function(){
-			a++;
-			console.log(a);
-		}
+	  var a = 1;  // 局部变量实现的累加
+	  return function(){
+		a++;
+		console.log(a);
+	  }
 	}
 	var anotherFn = fn();
 	anotherFn();  //2
@@ -114,11 +114,11 @@ JavaScript闭包学习笔记
 例子7(例子6的改写)
 
 	var fn = (function(){
-		var a = 1;
-		return function(){
-			a++;
-			console.log(a);
-		}
+	  var a = 1;
+	  return function(){
+		a++;
+		console.log(a);
+	  }
 	})();
 	fn();  //2
 	fn();  //3
@@ -126,19 +126,19 @@ JavaScript闭包学习笔记
 例子8：模块化代码
 
 	var fn = (function(){
-		var a = 1;		
-		function inFn1(){
-			a++;
-			console.log(a);
-		}		
-		function inFn2(){
-			a++;
-			console.log(a);
-		}		
-		return {	
-			fn1 : inFn1,
-			fn2 : inFn2			
-		}
+	  var a = 1;		
+	  function inFn1(){
+		a++;
+		console.log(a);
+	  }		
+	  function inFn2(){
+		a++;
+		console.log(a);
+	  }		
+	  return {	
+		fn1 : inFn1,
+		fn2 : inFn2			
+	  }
 	})();
 	fn.fn1();  //2
 	fn.fn2();  //3
@@ -162,9 +162,9 @@ a,inFn1,inFn2就是私有化的。
 	javascript
 	var aLi = document.getElementsByTagName('li');
 	for(var i=0;i<aLi.length;i++){
-		aLi[i].onclick = function(){
-			console.log(i);
-		};	
+	  aLi[i].onclick = function(){
+		console.log(i);
+	  };	
 	}
 
 上述代码对`li`都添加了点击事件，但是不管点击哪一个`li`的时候输出的都为3，其实可以简单的理解，当点击的时候循环已经结束，那i可不是3么。
@@ -179,11 +179,11 @@ a,inFn1,inFn2就是私有化的。
 	javascript
 	var aLi = document.getElementsByTagName('li');
 	for(var i=0;i<aLi.length;i++){
-		(function(i){	
-			aLi[i].onclick = function(){
-				console.log(i);
-			};	
-		})(i);			
+	  (function(i){	
+		aLi[i].onclick = function(){
+		  console.log(i);
+		};	
+	  })(i);			
 	}
 
 上述代码对`li`都添加了点击事件，但是和9.1中的情况就不一样了，此时点击对应的`li`就会输出对应的值。把i当做参数传进去，由闭包知道内部函数可以使用外部函数的参数的变量，并且外部函数执行完毕也不会影响内部函数。此时就是正确的结果了。
@@ -198,11 +198,11 @@ a,inFn1,inFn2就是私有化的。
 
 	javascript
 	for(var i=0;i<aLi.length;i++){
-		aLi[i].onclick = (function(i){
-			return function(){
-				console.log(i);	
-			}	
-		})(i);	
+	  aLi[i].onclick = (function(i){
+		return function(){
+		  console.log(i);	
+		}	
+	  })(i);	
 	}
 
 当然除了上述方法还可以自定义索引值等其他方法可以实现上述例子，这里就不详细描述了。
@@ -224,16 +224,16 @@ a,inFn1,inFn2就是私有化的。
 	var oDiv = document.getElementById('div1');
 	var id = oDiv.id;
 	oDiv.onclick = function(){
-		console.log(id);
+	  console.log(id);
 	};
 	oDiv = null;
 	//方法2，
 	var oDiv = document.getElementById('div1');	
 	oDiv.onclick = function(){
-		console.log(oDiv.id);
+	  console.log(oDiv.id);
 	};
 	window.onunload = function(){
-		oDiv.onclick = null;
+	  oDiv.onclick = null;
 	};
 
 
@@ -243,12 +243,12 @@ a,inFn1,inFn2就是私有化的。
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　return function(){
-	　　　　　　return this.name;
-	　　　　};
-	　　}
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　return function(){
+	　　　return this.name;
+	　　};
+	　}
 	};
 	alert(object.getNameFunc()());
 
@@ -256,14 +256,14 @@ a,inFn1,inFn2就是私有化的。
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　var that = this;
-	　　　　return function(){
-	　　　　　　return that.name;
-	　　　　};
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　var that = this;
+	　　return function(){
+	　　　return that.name;
+	　　};
 
-	　　}
+	　}
 	};
 	alert(object.getNameFunc()()); 
 

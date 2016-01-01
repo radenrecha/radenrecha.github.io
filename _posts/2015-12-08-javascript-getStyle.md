@@ -35,8 +35,8 @@ categories: JavaScript
 	</div>
 
 	<script>
-		var div = document.querySelectorAll("div")[0];
-		console.log(div.style.height)
+	  var div = document.querySelectorAll("div")[0];
+	  console.log(div.style.height)
 	</script>
 
 只有当这种情况下时才有效，然后这不符合w3c规范的，所以并不能采用这种方法。
@@ -54,7 +54,7 @@ getComputedStyle是一个可以获取当前元素所有最终使用的CSS属性�
 所以就有必要做一下兼容，，不过貌似IE要被废掉了，，还是做一下吧。
 
 	function getStyle( obj, attr) { 
-		return obj.currentStyle ? obj.currentStyle[attr]:getComputedStyle( obj )[attr]; 
+	  return obj.currentStyle ? obj.currentStyle[attr]:getComputedStyle( obj )[attr]; 
 	}
 
 注意事项：
@@ -117,13 +117,13 @@ body的offsetTop是0；body的offsetParent是null。
 下面是获取一个元素到达页面的绝对距离的方式，getPos函数。注意，一般工作中，把body的margin值清掉，这样可以避免IE6、7与其他标准浏览器在getPos上的差异。
 
 	function getPos(obj){
-	    var pos = {left: 0, top: 0};
-	    while(obj){
-	        pos.left += obj.offsetLeft;
-	        pos.top += obj.offsetTop;
-	        obj = obj.offsetParent;
-	    }
-	    return pos;
+	  var pos = {left: 0, top: 0};
+	  while(obj){
+	    pos.left += obj.offsetLeft;
+	    pos.top += obj.offsetTop;
+	    obj = obj.offsetParent;
+	  }
+	  return pos;
 	}
 
 

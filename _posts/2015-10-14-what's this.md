@@ -22,12 +22,12 @@ JavaScript中的this学习笔记
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　return function(){
-	　　　　　　return this.name;
-	　　　　};
-	　　}
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　return function(){
+	　　　return this.name;
+	　　};
+	　}
 	};
 	console.log(object.getNameFunc()());
 
@@ -35,14 +35,14 @@ JavaScript中的this学习笔记
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　var that = this;
-	　　　　return function(){
-	　　　　　　return that.name;
-	　　　　};
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　var that = this;
+	　　return function(){
+	　　　return that.name;
+	　　};
 
-	　　}
+	　}
 	};
 	console.log(object.getNameFunc()());
 
@@ -55,7 +55,7 @@ JavaScript中的this学习笔记
 测试1.1：
  
 	function testThis(v) {  
-		this.x = v;  
+	  this.x = v;  
 	}  
 	testThis(2);  
 	console.log(x);//2 
@@ -64,7 +64,7 @@ JavaScript中的this学习笔记
 
 	x = 1;
 	function testThis(v) {  
-		this.x = v;  
+	  this.x = v;  
 	}  
 	testThis(2);  
 	console.log(x);//2 
@@ -80,10 +80,10 @@ JavaScript中的this学习笔记
 
     var name = "李明洋";  
     var person = {  
-	    name : "李小洋",  
-	    sayName : function(){  
-		    console.log(this.name );  
-	    }  
+	  name : "李小洋",  
+	  sayName : function(){  
+		console.log(this.name );  
+	  }  
     }  
     person.sayName();//李小洋
 
@@ -91,10 +91,10 @@ JavaScript中的this学习笔记
 	
 	var name = "李明洋";  
     var person = {  
-	    name : "李小洋",  
-	    sayName : function(){  
-		    console.log(this.name );  
-	    }  
+	  name : "李小洋",  
+	  sayName : function(){  
+		console.log(this.name );  
+	  }  
     }  
     var sayName = person.sayName;
     sayName()//李明洋
@@ -105,17 +105,17 @@ this关键字虽然是在person.sayName中声明的，但运行的时候是windo
 
 	var name = "李明洋";
 	var person1 = {
-	    name: "李小洋",
-	    sayName: function(){
-	        console.log(this.name);
-	    }
+	  name: "李小洋",
+	  sayName: function(){
+	    console.log(this.name);
+	  }
 	};
 	var person2 = {
-	    name: "李洋洋",
-	    sayName: function(){
-	        var fun = person1.sayName;
-	        fun();
-	    }
+	  name: "李洋洋",
+	  sayName: function(){
+	    var fun = person1.sayName;
+	    fun();
+	  }
 	};
 	person2.sayName();　　//李明洋
 
@@ -128,12 +128,12 @@ new关键字后的构造函数中的this指向用该构造函数构造出来的�
 测试3.1
 
 	function Person(name,age){
-	    this.name = name;
-	    this.age = age;       
+	  this.name = name;
+	  this.age = age;       
 	}
 	Person.prototype.show = function(){
-	    console.log(this.name);
-	    console.log(this.age);
+	  console.log(this.name);
+	  console.log(this.age);
 	}
 
 	var mySelf = new Person("李明洋",23);
@@ -148,13 +148,13 @@ apply和call能够强制改变函数执行时的当前对象，让this指向其�
 
 	var name = "李明洋";
 	var person1 = {
-		name: "李小洋",
-		sayName: function(){
-		    console.log(this.name);
-		}
+	  name: "李小洋",
+	  sayName: function(){
+		console.log(this.name);
+	  }
 	};
 	var person2 = {
-		name: "李洋洋"
+	  name: "李洋洋"
 	};
 	person1.sayName();//李小洋
 	person1.sayName.apply();//李明洋
@@ -170,12 +170,12 @@ apply用于改变函数执行时的当前对象，当无参数时，当前对象
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　return function(){
-	　　　　　　return this.name;
-	　　　　};
-	　　}
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　return function(){
+	　　　return this.name;
+	　　};
+	　}
 	};
 	console.log(object.getNameFunc()());//The Window
 
@@ -185,14 +185,14 @@ apply用于改变函数执行时的当前对象，当无参数时，当前对象
 
 	var name = "The Window";
 	var object = {
-	　　name:"My Object",
-	　　getNameFunc:function(){
-	　　　　var that = this;
-	　　　　return function(){
-	　　　　　　return that.name;
-	　　　　};
+	　name:"My Object",
+	　getNameFunc:function(){
+	　　var that = this;
+	　　return function(){
+	　　　return that.name;
+	　　};
 
-	　　}
+	　}
 	};
 	console.log(object.getNameFunc()());//My Object
 
@@ -200,13 +200,13 @@ apply用于改变函数执行时的当前对象，当无参数时，当前对象
 
 	var name = "李明洋";  
 	var person ={  
-		name : "李小洋",  
-		sayName : function(){  
-			console.log(this.name);  
-		},  
-		waitSayName : function(){  
-			setTimeout(this.sayName, 1000);  
-		}  
+	  name : "李小洋",  
+	  sayName : function(){  
+		console.log(this.name);  
+	  },  
+	  waitSayName : function(){  
+		setTimeout(this.sayName, 1000);  
+	  }  
 	};  
 	person.waitSayName();//李明洋
 
