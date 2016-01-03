@@ -87,5 +87,13 @@
 	"des": "通过canvas实现一个简单俄罗斯方块小游戏,使用了canvas，requre.js，sass等技术",
 	"url": "http://limingyang2012.github.io/tetris/",
 	"code": "https://github.com/limingyang2012/tetris/"
+},
+{
+	"src": "../../assets/demo/inverter.jpg",
+	"height": 262,
+	"width": 240,
+	"des": "简单的色块翻转游戏，每个方块一面橙色，一面蓝色。点击一个方块，这个方块以及其四周的方块颜色会发生变换。将所有方块都变换成蓝色你就赢了",
+	"url": "http://limingyang2012.github.io/inverter/",
+	"code": "https://github.com/limingyang2012/inverter"
 }
 ]
