@@ -23,7 +23,7 @@ var waterfall = function(){
             child.append( description );
             $(".element").eq(_index).append( child );
         }
-    
+
         var elementHArr=[];
         console.log( $(".element").eq( 0 ).height())  
         $(".element").each( function( index, value ){
