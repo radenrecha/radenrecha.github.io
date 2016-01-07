@@ -1,31 +1,42 @@
 # limingyang2012.github.io
 
+###About Theme 
 
-这是我的个人博客，大部分内容都是自己写的，姑且称为博客也是我自己的吧。基于 jekyll。如果你想使用这个博客模板。最好能帮我**star**一下，同时也麻烦您标注一下来源，感谢。
+A simple and clean Jekyll theme. The theme works well on mobile devices as well.If you are using this theme, please click a **star** on this respository, I am happy to know where the theme has been used.
 
-* Site: [LMY-HOME](limingyang2012.github.io)
 
-###HOME-PAGE
+###About ME
 
-![home](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/home.jpg)
+blog：[blog](http://limingyang2012.github.io/)
 
-###BLOG-PAGE
+微博：[limingyang2012](http://weibo.com/limingyang2012)
 
-![blog](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/blog.jpg)
+facebook：[limingyang2012](https://www.facebook.com/limingyang2012)
 
-###POST-PAGE
+linkedin：[limingyang2012](www.linkedin.com/in/limingyang2012)
+
+###Getting Started
+
+1. Clone this repository on your local,
+1. [Install Jekyll](https://github.com/mojombo/jekyll/wiki/install),
+1. Go at the root of the repository and run ```jekyll serve --watch```,
+1. Go to http://localhost:4000,
+1. [Great success! High five!](http://www.youtube.com/watch?v=wWWyJwHQ-4E)
+
+#####When you use this theme. Please make sure to add the author's info, like this: Jekyll theme by [limingyang2012](https://github.com/limingyang2012) or Designed by [limingyang2012](https://github.com/limingyang2012)
+
+You may need to reconfigure `_config.yml` and other file
 
 ![post](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/post.jpg)
 
-###DENO-PAGE
 
-![demo](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/demo.jpg)
+###Contact
 
-###ABOUT-PAGE
+If you have any questions or suggestions for improvements, don't
+hesitate to [open an issue](https://github.com/limingyang2012/limingyang2012.github.io/issues)
+or making a pull request for your fork!
 
-![about](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/assets/readme/about.jpg)
-
-## License
+###License
 
 [MIT License](https://github.com/limingyang2012/limingyang2012.github.io/blob/master/LICENSE)
 
