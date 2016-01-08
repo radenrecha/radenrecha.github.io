@@ -150,7 +150,7 @@ body { font-family: "Microsoft YaHei",arial, sans-serif; font-size: 100%; height
 @media only screen and (max-width: 768px) { .post-content p { font-size: 16px; } }
 .post-content a { color: #8B1A1A; }
 .post-content blockquote { font-family: "consolas", 'Heiti SC', sans-serif; font-size: 18px; color: #473C8B; padding-left: 6px; border-left: 6px solid #999; }
-.post-content code { font-family: "consolas", 'Heiti SC', sans-serif; font-size: 18px; background-color: #111; border-radius: 2px; line-height: 26px; padding: 6px 10px; margin: 0 3px; color: #8e8222; overflow: hidden; }
+.post-content code { font-family: "consolas", 'Heiti SC', sans-serif; font-size: 18px; background-color: #fff; border-radius: 4px; line-height: 26px; padding: 6px 10px; margin: 0 3px; color: #8e8222; overflow: hidden; }
 @media only screen and (max-width: 768px) { .post-content code { max-width: 88%; } }
 .post-content ul { margin: 1em; }
 .post-content ul li { margin-left: 2em; margin-bottom: 6px; padding: 4px 0px; list-style-type: disc; }
