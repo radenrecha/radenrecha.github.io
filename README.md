@@ -19,9 +19,8 @@ linkedin：[limingyang2012](www.linkedin.com/in/limingyang2012)
 
 1. Clone this repository on your local,
 1. [Install Jekyll](https://github.com/mojombo/jekyll/wiki/install),
-1. Go at the root of the repository and run ```jekyll serve --watch```,
+1. Go at the root of the repository and run ```jekyll serve```,
 1. Go to http://localhost:4000,
-1. [Great success! High five!](http://www.youtube.com/watch?v=wWWyJwHQ-4E)
 
 #####When you use this theme. Please make sure to add the author's info, like this: Jekyll theme by [limingyang2012](https://github.com/limingyang2012) or Designed by [limingyang2012](https://github.com/limingyang2012)
 
