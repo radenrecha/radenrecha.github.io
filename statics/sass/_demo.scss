@@ -3,7 +3,12 @@
     //min-height:110vh;
     margin: 60px auto 0;
     padding:20px 0;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px){
+        position:absolute;
+        top:70px;
+        left:20px;
+    }
+    @media only screen and (max-width: 375px) {
         width:90%;
         position:absolute;
         top:60px;
@@ -17,7 +22,7 @@
         width: 236px; 
         float: left;
         margin-right: 10px;
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 375px) {
             width: 100%;
         }   
         

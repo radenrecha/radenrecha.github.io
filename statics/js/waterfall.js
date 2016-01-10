@@ -1,5 +1,14 @@
 /*瀑布流效果*/
 var waterfall = function(){
+    //首先是对demo结构进行操作
+    if($(window).width() <= 768 && $(window).width() > 375){
+        $(".element").eq(3).remove();
+    }else if($(window).width() <= 375){
+        $(".element").eq(3).remove();
+        $(".element").eq(2).remove();
+        $(".element").eq(1).remove();
+    }
+    
     $.getJSON("../../demo/data.json",function(data){
         for(var i=0;i<data.length;i++){
             //获取高度最小的child
