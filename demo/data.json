@@ -95,5 +95,13 @@
 	"des": "简单的色块翻转游戏，每个方块一面橙色，一面蓝色。点击一个方块，这个方块以及其四周的方块颜色会发生变换。将所有方块都变换成蓝色你就赢了",
 	"url": "http://limingyang2012.github.io/inverter/",
 	"code": "https://github.com/limingyang2012/inverter"
+},
+{
+	"src": "../../assets/demo/swipe.jpg",
+	"height": 411,
+	"width": 331,
+	"des": "一个基于zepto的手机端轮播图插件，可以进行轮播设置，可以进行滑动操作",
+	"url": "https://github.com/limingyang2012/zepto.swipe",
+	"code": "https://github.com/limingyang2012/zepto.swipe/swipe"
 }
 ]
