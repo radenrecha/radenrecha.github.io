@@ -8,7 +8,17 @@
         top:70px;
         left:20px;
     }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 601px) {
+        width:100%;
+        position:absolute;
+        top:60px;
+        left:59%;
+        transform:translateX(-50%);
+        -webkit-transform:translateX(-50%);
+        -o-transform:translateX(-50%);
+        -moz-transform:translateX(-50%);
+    }
+    @media only screen and (max-width: 500px) {
         width:90%;
         position:absolute;
         top:60px;
@@ -22,7 +32,7 @@
         width: 236px; 
         float: left;
         margin-right: 10px;
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 500px) {
             width: 100%;
         }   
         
