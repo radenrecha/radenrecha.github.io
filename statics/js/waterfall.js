@@ -1,12 +1,12 @@
 /*瀑布流效果*/
 var waterfall = function(){
     //首先是对demo结构进行操作
-    if($(window).width() <= 768 && $(window).width() > 600){
+    if($(window).width() <= 1024 && $(window).width() > 767){
         $(".element").eq(3).remove();
-    }else if($(window).width() <= 600 && $(window).width() > 500){
+    }else if($(window).width() <= 767 && $(window).width() > 540){
         $(".element").eq(3).remove();
         $(".element").eq(2).remove();
-    }else if($(window).width() <= 500 ){
+    }else if($(window).width() <= 540 ){
         $(".element").eq(3).remove();
         $(".element").eq(2).remove();
         $(".element").eq(1).remove();
