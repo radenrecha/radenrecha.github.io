@@ -2,7 +2,9 @@
 
 ###About Theme 
 
+
 A simple and clean Jekyll theme. The theme works well on mobile devices as well.If you are using this theme, please click a **star** on this respository, I am happy to know where the theme has been used.
+
 
 
 ###About ME
