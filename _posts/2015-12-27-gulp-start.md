@@ -12,7 +12,7 @@ gulp简单使用方法
 * content
 {:toc}
 
-###Gulp？
+### Gulp？
 
 [Gulp](http://gulpjs.com/)是一个构建系统，开发者可以使用它在网站开发过程中自动执行常见任务。Gulp是基于Node.js构建的，因此Gulp源文件和你用来定义任务的Gulp文件都被写进了JavaScript里。前端开发者可以使用它来处理常见任务：
 
@@ -21,7 +21,7 @@ gulp简单使用方法
 * 使用预处理器如Sass、LESS
 * 优化资源，比如压缩CSS、JavaScript、压缩图片
 
-###Node.js
+### Node.js
 
 [Node.js](http://nodejs.cn/)就是运行在服务端的 JavaScript。Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。Gulp和所有插件都通过JavaScript编写并依托Node.js平台。作为前端工程师你最好了解简单的Node.js。
 
@@ -41,7 +41,7 @@ gulp简单使用方法
 下面回到我们的重点gulp
 
 
-###全局安装Gulp
+### 全局安装Gulp
 
 首先我们需要安装Node.js的环境这个就不介绍了。推荐[教程](http://www.runoob.com/nodejs/nodejs-install-setup.html)自己安装配置好。
 
@@ -52,7 +52,7 @@ gulp简单使用方法
 就这么简单，安装好在继续后面的。
 
 
-###使用Gulp
+### 使用Gulp
 
 首先，我们新建一个project文件夹，并在该目录下执行`npm init`命令：
 
@@ -124,7 +124,7 @@ npm init命令会为你创建一个package.json文件，这个文件保存着这
 * 更动通知 [gulp-notify](https://github.com/mikaelbr/gulp-notify)
 
 
-###参考资料
+### 参考资料
 1、[gulp中文网](http://www.gulpjs.com.cn/)
 
 2、[gulp入门指南](http://www.open-open.com/lib/view/open1417068223049.html)
