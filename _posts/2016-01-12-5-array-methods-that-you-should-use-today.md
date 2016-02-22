@@ -16,7 +16,7 @@ categories: JavaScript
 当2009年12月3日ECMAScript5发布的时候，他带了了更新的数组方法用来提升现有的数组方法。然而由于缺少支持ES5的浏览器，使得这些方法当时并没有吸引开发者的注意。在9中数组方法中我挑选了5种方法，我个人认为是最有用的。
 
 
-###indexOf
+### indexOf
 
 indexOf()方法返回目标元素在数组中第一次出现的位置，数组中如果不存在改元素则返回-1，例子如下：
 
@@ -39,7 +39,7 @@ indexOf()方法返回目标元素在数组中第一次出现的位置，数组�
 
 	console.log("found:", arr.indexOf("orange") != -1);  //found: true 
 	
-###filter
+### filter
 
 filter()方法创建一个新数组，新数组中的元素满足过滤的条件，例子如下：
 
@@ -77,7 +77,7 @@ filter()方法创建一个新数组，新数组中的元素满足过滤的条件
 
 	console.log("Filter results:",newArr);  //Filter results: { "name": "orange", "count": 5 },{ "name": "orange", "count": 16 } 
 
-###forEach
+### forEach
 
 forEach()方法相当于for对每个元素执行对应的方法，例子如下：
 
@@ -98,7 +98,7 @@ forEach()方法相当于for对每个元素执行对应的方法，例子如下�
 
 forEach()方法是for循环的重大升级，如果这里只有一个方法可以选择，请选择forEach()吧。
 
-###map
+### map
 
 map()方法对原数组的每个元素进行一定操作，返回一个新数组，例子如下：
 
@@ -141,7 +141,7 @@ map()方法对原数组的每个元素进行一定操作，返回一个新数组
 								,{ "first_name": "Yehuda", "last_name": "Katz", "full_name": "Yehuda Katz" }
 
 
-###reduce
+### reduce
 
 reduce()方法作为一个累加器的功能，数组从左到右将其降低到一个值，例子如下：
 
@@ -267,17 +267,17 @@ prev指向数组的第一个元素，next指向第二个元素。但是请注意
 	Final Object: { "apple": 2, "orange": 1, "pear": 1 }
 
 
-###浏览器支持
+### 浏览器支持
 
 根据ECMAScript兼容表，上述五中方法在所有移动浏览器中都能运行，几乎所有主流桌面浏览器也能运行，只有IE8及以前的不支持。
 
-###最后说一句
+### 最后说一句
 
 本文是翻译自一篇外文，不过翻译途中发现网上已经有人翻译了，顾在参考文献中列出了原文以及另一篇翻译文献，翻译的比较好，还有就是推荐直接看英文的。
 	
 
 
-###参考资料
+### 参考资料
 1、[5 Array Methods That You Should Be Using Now](http://colintoh.com/blog/5-array-methods-that-you-should-use-today?utm_source=ourjs.com#array_%22extras%22)
 
 2、[5个现在就该使用的数组Array方法](http://ourjs.com/detail/54a9f2ba5695544119000005)
