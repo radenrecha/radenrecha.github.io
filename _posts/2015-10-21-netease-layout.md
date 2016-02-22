@@ -12,13 +12,13 @@ categories: HTMLCSS
 * content
 {:toc}
 
-###居中布局
+### 居中布局
 
-####水平居中
+#### 水平居中
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/1.1.png)
 
-#####1、text-align+inline-block
+##### 1、text-align+inline-block
 	
 	CSS
 	.parent{
@@ -33,7 +33,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>	
 
-#####2、table+margin
+##### 2、table+margin
 
 	CSS
 	.child{
@@ -46,7 +46,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####3、position+transform
+##### 3、position+transform
 
 	CSS
 	.parent{
@@ -63,7 +63,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####4、flex
+##### 4、flex
 
 	CSS
 	.parent{
@@ -76,7 +76,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####5、flex+margin
+##### 5、flex+margin
 
 	CSS
 	.parent{
@@ -91,11 +91,11 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-####垂直居中
+#### 垂直居中
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/1.2.png)
 
-#####1、table-cell+vertical-align
+##### 1、table-cell+vertical-align
 	
 	CSS
 	.parent{
@@ -108,7 +108,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####2、position+transform
+##### 2、position+transform
 	
 	CSS
 	.parent{
@@ -124,7 +124,7 @@ categories: HTMLCSS
 	<div class="parent">
 	  <div class="child">DEMO</div>
 	</div>
-#####3、flex
+##### 3、flex
 
 	CSS
 	.parent{
@@ -137,11 +137,11 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-####水平垂直居中
+#### 水平垂直居中
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/1.3.png)
 
-#####1、text-align+table-cell+inline-block
+##### 1、text-align+table-cell+inline-block
 
 	CSS
 	.parent{
@@ -158,7 +158,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####2、position+transform
+##### 2、position+transform
 
 	CSS
 	.parent{
@@ -176,7 +176,7 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-#####3、flex
+##### 3、flex
 
 	CSS
 	.parent{
@@ -190,13 +190,13 @@ categories: HTMLCSS
 	  <div class="child">DEMO</div>
 	</div>
 
-###多列布局
+### 多列布局
 
-####定宽与自适应
+#### 定宽与自适应
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/2.1.png)
 
-#####1、float
+##### 1、float
 
 	CSS
 	.left{
@@ -218,7 +218,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####2、float
+##### 2、float
 
 	CSS
 	.left{
@@ -242,7 +242,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####3、float+overflow
+##### 3、float+overflow
 
 	CSS
 	.left{
@@ -265,7 +265,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####4、table
+##### 4、table
 
 	CSS
 	.parent{
@@ -291,7 +291,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####5、flex
+##### 5、flex
 
 	CSS
 	.parent{
@@ -316,7 +316,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####6、flex
+##### 6、flex
 
 	CSS
 	.parent{
@@ -341,11 +341,11 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-####不定宽与自适应
+#### 不定宽与自适应
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/2.2.png)
 
-#####1、float+overflow
+##### 1、float+overflow
 
 	CSS
 	.left{
@@ -368,7 +368,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####2、table
+##### 2、table
 
 	CSS
 	.parent{
@@ -396,7 +396,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####3、flex
+##### 3、flex
 
 	CSS
 	.parent{
@@ -422,11 +422,11 @@ categories: HTMLCSS
 	</div>
 
 
-####等分
+#### 等分
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/2.3.png)
 
-#####1、margin-left+margin
+##### 1、margin-left+margin
 	
 	CSS
 	.parent{
@@ -447,7 +447,7 @@ categories: HTMLCSS
 	  <div class="column"><p>4</p></div>
 	</div>
 
-#####2、table
+##### 2、table
 	
 	CSS
 	.parent-fix{
@@ -473,7 +473,7 @@ categories: HTMLCSS
 	  </div>
 	</div>
 
-#####3、flex
+##### 3、flex
 	
 	CSS
 	.parent{
@@ -496,7 +496,7 @@ categories: HTMLCSS
 
 
 
-####等高
+#### 等高
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/2.4.png)
 
@@ -528,13 +528,13 @@ categories: HTMLCSS
 	</div>
 
 
-###全屏布局
+### 全屏布局
 
-####部分定宽高
+#### 部分定宽高
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/3.1.png)
 
-#####1、position
+##### 1、position
 
 	CSS
 	html,body,.parent{margin:0;height:100%;overflow:hidden;}
@@ -565,7 +565,7 @@ categories: HTMLCSS
 	  <div class="bottom">bottom</div>
 	</div>
 	
-#####2、flex
+##### 2、flex
 
 	CSS
 	html,body,.parent{margin:0;height:100%;overflow:hidden;}
@@ -589,7 +589,7 @@ categories: HTMLCSS
 	  </div>
 	  <div class="bottom">bottom</div>
 	</div>
-####部分宽高由百分比实现
+#### 部分宽高由百分比实现
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/3.2.png)
 	
@@ -615,7 +615,7 @@ categories: HTMLCSS
 	</div>
 
 
-####部分宽高由内容自适应
+#### 部分宽高由内容自适应
 
 ![layout-center]({{ site.url }}/assets/netease-layout-img/3.3.png)
 
