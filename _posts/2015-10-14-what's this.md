@@ -46,9 +46,9 @@ JavaScript中的this学习笔记
 	};
 	console.log(object.getNameFunc()());
 
-###几种情况讨论
+### 几种情况讨论
 
-####作为纯粹的函数调用
+#### 作为纯粹的函数调用
 
 函数可以直接被调用，此时 this 绑定到全局对象。在浏览器中，window 就是该全局对象
 
@@ -72,7 +72,7 @@ JavaScript中的this学习笔记
 通过测试2可以知道作为单纯的函数调用时this指向了全局对象，即window。
 
 
-###作为对象的方法调用
+### 作为对象的方法调用
 
 在 JavaScript 中，函数也是对象，因此函数可以作为一个对象的属性，此时该函数被称为该对象的方法，在使用这种调用方式时，this 被自然绑定到该对象，这时this就指该对象。
 
@@ -121,7 +121,7 @@ this关键字虽然是在person.sayName中声明的，但运行的时候是windo
 
 求解释啊！！！
 
-####作为构造函数，关键字new
+#### 作为构造函数，关键字new
 
 new关键字后的构造函数中的this指向用该构造函数构造出来的新对象。
 
@@ -140,7 +140,7 @@ new关键字后的构造函数中的this指向用该构造函数构造出来的�
 	mySelf.show();        //李明洋，23
 
 
-####使用call和apply设置this
+#### 使用call和apply设置this
 
 apply和call能够强制改变函数执行时的当前对象，让this指向其他对象。
 
@@ -162,7 +162,7 @@ apply和call能够强制改变函数执行时的当前对象，让this指向其�
 
 apply用于改变函数执行时的当前对象，当无参数时，当前对象为window，有参数时当前对象为该参数。
 
-####特殊情况
+#### 特殊情况
 
 --在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window
 
@@ -213,7 +213,7 @@ apply用于改变函数执行时的当前对象，当无参数时，当前对象
 setTimeout、setInterval执行时的当前对象是全局对象window；
 
 
-###简单总结
+### 简单总结
 
 * 作为纯粹的函数调用，此时 this 绑定到全局对象。在浏览器中，window 就是该全局对象
 
@@ -225,7 +225,7 @@ setTimeout、setInterval执行时的当前对象是全局对象window；
 
 * 在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window。嵌套函数中的this不会继承上层函数的this，如果需要，可以用一个变量保存上层函数的this。
 
-###参考资料：
+### 参考资料：
 
 [1、深入浅出 JavaScript 中的 this ](http://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/)
 
