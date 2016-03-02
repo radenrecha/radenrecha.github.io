@@ -12,7 +12,7 @@ categories: JavaScript
 * content
 {:toc}
 
-###方法1
+### 方法1
 
 使用了双重循环，并且只考虑了数组中只有数字或者字符串的情况，效率比较低
 
@@ -29,7 +29,7 @@ categories: JavaScript
 	console.log(([3,4,2,5,{a:3},4,3,4,{a:3},8,true,1,3,3,true,4,5,6,7]).uniqArray())
 	//[ 3, 4, 2, 5, { a: 3 }, { a: 3 }, 8, true, 6, 7 ]
 
-###方法2
+### 方法2
 
 通过一个缓存保存去重后的数组，并通过indexOf判断是否去重，也是只能去重数字或者字符串或者布尔值
 
@@ -45,7 +45,7 @@ categories: JavaScript
 	console.log(([3,4,2,5,{a:3},4,3,4,{a:3},8,true,1,3,3,true,4,5,6,7]).uniqArray())
 	//[ 3, 4, 2, 5, { a: 3 }, { a: 3 }, 8, true, 1, 6, 7 ]
 
-###方法3
+### 方法3
 
 类似方法2
 
@@ -62,7 +62,7 @@ categories: JavaScript
 	console.log(([3,4,2,5,{a:3},4,3,4,{a:3},8,true,1,3,3,true,4,5,6,7]).uniqArray())
 	//[ 3, 4, 2, 5, { a: 3 }, { a: 3 }, 8, true, 1, 6, 7 ]
 
-###方法4
+### 方法4
 
 通过一个hash保存已经提取出来的元素，效率高，可以去除对象和布尔值
 
