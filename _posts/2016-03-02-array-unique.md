@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "数组常见去重方法"
-date:  2015-03-02
-categories: JAVASCRIPT
+date:  2016-03-02
+categories: JavaScript
 ---
 
 数组常见去重方法总结
