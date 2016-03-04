@@ -57,16 +57,17 @@ categories: JavaScript
 类似方法2
 
 	Array.prototype.uniqArray = function(){
-    var buf = [this[0]]; 
-    for(var i = 1; i < this.length; i++){
-    	if (this.indexOf(this[i]) == i){
-			buf.push(this[i]);
-			} 
-    }
-    return buf;
-  }
-  console.log(([3,4,2,5,4,3,4,8,1,3,3,4,5,6,7]).uniqArray())
-  //[ 3, 4, 2, 5, 8, 1, 6, 7 ]
+      var buf = [this[0]]; 
+      for(var i = 1; i < this.length; i++){
+        if (this.indexOf(this[i]) == i){
+		  buf.push(this[i]);
+	    } 
+      }
+      return buf;
+  	}
+
+    console.log(([3,4,2,5,4,3,4,8,1,3,3,4,5,6,7]).uniqArray())
+    //[ 3, 4, 2, 5, 8, 1, 6, 7 ]
 
 	console.log(([3,4,2,5,{a:3},4,3,4,{a:3},8,true,1,3,3,true,4,5,6,7]).uniqArray())
 	//[ 3, 4, 2, 5, { a: 3 }, { a: 3 }, 8, true, 1, 6, 7 ]
