@@ -2,7 +2,7 @@
 layout: post
 title:  "我也来谈谈inline-block的间隙"
 date:  2016-03-08
-categories: htmlcss
+categories: HTMLCSS
 ---
 
 inline-block换行解析的解决方案总结
@@ -50,7 +50,7 @@ inline-block换行解析的解决方案总结
 上面代码呈现的效果就如下所示
 
 <div style="text-align:center;">
-	<img src="../assets/inline-block/1.jpg" style="width:400px;height:60px">
+	<img src="{{ site.url }}/assets/inline-block/1.jpg" style="width:400px;height:60px">
 </div>
 
 也就是说`li`后面的换行被解析成了空格在浏览器中渲染出来了，所以我们看见每个`li`后面都有一个空格，那么我们该怎么解决这个问题呢。
@@ -66,7 +66,7 @@ inline-block换行解析的解决方案总结
 效果如下：
 
 <div style="text-align:center;">
-	<img src="../assets/inline-block/2.jpg" style="width:400px;height:60px">
+	<img src="{{ site.url }}/assets/inline-block/2.jpg" style="width:400px;height:60px">
 </div>
 
 虽然这种方法成功的移除了空格，但是考虑到代码结构和代码可读性，所以，并不是推荐这种做法。
