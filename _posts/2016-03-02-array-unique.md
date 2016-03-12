@@ -91,3 +91,14 @@ categories: JavaScript
 	
 	console.log(([3,4,2,5,{a:3},4,3,4,{a:3},8,true,1,3,3,true,4,5,6,7]).uniqArray())
 	//[ 3, 4, 2, 5, { a: 3 }, 8, true, 1, 6, 7 ]
+
+
+当然ES6又提供了更搞笑的选择，，不过貌似空对象不能去掉啊。
+
+### 方法5
+
+	function uniqArray(arr) {
+	  return Array.from(new Set(arr));
+	}
+	
+	uniqArray([1,1,2,3]) // [1, 2, 3]
