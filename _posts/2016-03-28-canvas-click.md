@@ -168,6 +168,9 @@ categories: JavaScript
 	</body>
 	</html> 
 	
-	
+
+### 参考文献
+
+1、[HTML5 canvas 内部元素事件响应](http://bz5811.iteye.com/blog/1908172)
 
 	
