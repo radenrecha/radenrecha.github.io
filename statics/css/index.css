@@ -151,11 +151,12 @@ body { font-family: "Microsoft YaHei",arial, sans-serif; font-size: 100%; height
 .post-content h3 { line-height: 50px; margin-top: 30px; }
 .post-content a { color: #8B1A1A; }
 .post-content blockquote { font-family: "consolas", 'Heiti SC', sans-serif; font-size: 18px; color: #473C8B; padding-left: 6px; border-left: 6px solid #999; }
+.post-content blockquote p { font-weight: bold; }
 .post-content code { background-color: #fff; border-radius: 2px; line-height: 18px; padding: 0px 4px; color: #8e8222; }
 .post-content .hljs { font-family: "consolas", 'Heiti SC', sans-serif; font-size: 18px; background-color: #fff; border-radius: 4px; line-height: 26px; padding: 6px 10px; margin: 0 3px; color: #8e8222; overflow: hidden; }
 @media only screen and (max-width: 768px) { .post-content .hljs { max-width: 88%; } }
 .post-content ul { margin: 1em; }
-.post-content ul li { margin-left: 2em; margin-bottom: 6px; padding: 4px 0px; list-style-type: disc; }
+.post-content ul li { font-size: 16px; line-height: 28px; margin-left: 2em; margin-bottom: 6px; padding: 4px 0px; list-style-type: disc; }
 .post-content .javascript { opacity: 1; }
 
 .pagination { margin-top: 20px; }
