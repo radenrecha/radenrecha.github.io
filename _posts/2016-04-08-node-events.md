@@ -250,7 +250,7 @@ newListener在添加 listener 时会发生该事件。 此时无法确定 listen
 
 removeListener在移除 listener 时会发生该事件。 此时无法确定 listener 是否在 emitter.listeners(event) 返回的列表中。
 
-####实例
+#### 实例
 
 	var EventEmitter = require('events').EventEmitter
 	var emitter = new EventEmitter();
