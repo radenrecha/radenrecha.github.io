@@ -18,7 +18,9 @@ categories: Node
 	<img src="{{ site.url }}/assets/url/url.jpg" style="width:882px;height:398px">
 </div>
 
+
 上图摘自《The Node Beginner Book》，是一个典型的url结构图。下面进行详细介绍。
+
 
 ### url组成结构
 
