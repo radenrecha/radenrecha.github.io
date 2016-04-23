@@ -15,7 +15,9 @@ categories: Node
 
 ### 写在前面
 <div style="text-align:center;">
+
 	<img src="{{ site.url }}/assets/url/url.jpg" style="width:882px;height:398px">
+
 </div>
 
 
@@ -244,6 +246,7 @@ Options 对象可能包含 encodeURIComponent 属性 (默认：querystring.escap
 
 ##### 语法
 
+
 > querystring.parse(str[, sep][, eq][, options])
 
 将 query string 反序列化为对象。
@@ -253,6 +256,7 @@ Options 对象可能包含 encodeURIComponent 属性 (默认：querystring.escap
 Options 对象可能包含 maxKeys 属性（默认：1000），用来限制处理过的健值（keys）。设置为 0 的话，可以去掉键值的数量限制。
 
 Options 对象可能包含 decodeURIComponent 属性（默认：querystring.unescape），如果需要，可以用来解码 non-utf8 编码的字符串。
+
 
 ##### 实例
 	
