@@ -305,7 +305,7 @@ removeListener在移除 listener 时会发生该事件。 此时无法确定 lis
 	  dog.emit('bark');
 	}, 1000);
 
-Animal继承了EventEmitter，所以其实例拥有on和emit方法，上面代码每隔1s触发一次。
+Animal继承了EventEmitter，所以其实例拥有on和emit方法，上面代码每隔1s将函数加入队列中。
 
 
 #### util模块实现继承
@@ -314,7 +314,7 @@ Animal继承了EventEmitter，所以其实例拥有on和emit方法，上面代�
 	var EventEmitter = require('events').EventEmitter;
 	 
 	function Animal(name){
-		this.name = name;
+	  this.name = name;
 	  EventEmitter.call(this);
 	}
 	
